@@ -48,10 +48,10 @@ class ViewController: UIViewController {
                 //scanner.setScanningViewController()
                 //scanner.setTableViewController()
                 scanner.start()
-                if let delegate = UIApplication.sharedApplication().delegate {
-                    //delegate.performSelector("setScanner", withObject: scanner)
-                }
                 NSLog("scanning")
+                if let delegate = UIApplication.sharedApplication().delegate as! AppDelegate? {
+                    delegate.setScanner(scanner)
+                }
                 return
             default:
                 return

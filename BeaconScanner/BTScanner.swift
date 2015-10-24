@@ -16,6 +16,8 @@ import CoreLocation
 class BTScanner: NSObject, CLLocationManagerDelegate {
     let manager = CLLocationManager()
     let beaconRegion = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "0E0A5A4C-7C12-4D89-8511-68D294225B5E")!, identifier: "vu.phuong.beacons")
+    var beaconTable: FoundBeaconsViewController?
+    var searchView: searchingViewController?
     
     override init() {
         super.init()
@@ -41,17 +43,26 @@ class BTScanner: NSObject, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
         // send a message to the scanning view saying there are beacons
-        NSLog("%@, %@", manager, region)
+        if let search = searchView {
+            // tell search view beacons are found
+        }
     }
     
     func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {
         // send a message to the table saying there are no beacons
-        NSLog("%@, %@", manager, region)
+        if let table = beaconTable {
+            // tell table view no beacons found
+        }
     }
     
     func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
         // beacons is the array of beacons found
-        NSLog("%@, %@, %@", manager, region, beacons)
+        if let search = searchView {
+            // tell searchView about beacons
+        }
+        if let table = beaconTable {
+            // tell table about beacons
+        }
     }
     
     func locationManager(manager: CLLocationManager, rangingBeaconsDidFailForRegion region: CLBeaconRegion, withError error: NSError) {

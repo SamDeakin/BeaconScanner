@@ -13,14 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var _scanner: BTScanner?
-    var scanner: BTScanner? {
-        set {
-            _scanner = newValue
-        }
-        get {
-            return _scanner
-        }
-    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -50,7 +42,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    
+    internal func setScanner(scanner: BTScanner) {
+        self._scanner = scanner
+    }
+    
+    internal func getScanner() -> BTScanner {
+        return _scanner!
+    }
 }
 

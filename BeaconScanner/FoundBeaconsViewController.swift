@@ -8,8 +8,11 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
 class FoundBeaconsViewController: UITableViewController {
+    
+    var beacons: [CLBeacon] = []
     
     override init(style: UITableViewStyle) {
         super.init(style: style);
@@ -40,6 +43,8 @@ class FoundBeaconsViewController: UITableViewController {
         return 1;
     }
     
+    //override func
+    
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         // Currently no table section headers
         return nil;
@@ -48,5 +53,12 @@ class FoundBeaconsViewController: UITableViewController {
     override func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         // Curretnly no table section footers
         return nil;
+    }
+    
+    func foundBeacons(found: [CLBeacon]) {
+        beacons = found
+        if (beacons.count == 0) {
+            // TODO popup no beacons and dismiss self
+        }
     }
 }
