@@ -39,5 +39,24 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let identifier = segue.identifier {
+            switch(identifier) {
+            case "startScanning":
+                let scanner = BTScanner()
+                //scanner.setScanningViewController()
+                //scanner.setTableViewController()
+                scanner.start()
+                if let delegate = UIApplication.sharedApplication().delegate {
+                    //delegate.performSelector("setScanner", withObject: scanner)
+                }
+                NSLog("scanning")
+                return
+            default:
+                return
+            }
+        }
+    }
 }
 

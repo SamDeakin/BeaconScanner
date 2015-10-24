@@ -12,17 +12,20 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var scanner: BTScanner!
+    var _scanner: BTScanner?
+    var scanner: BTScanner? {
+        set {
+            _scanner = newValue
+        }
+        get {
+            return _scanner
+        }
+    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         self.window!.rootViewController = UIStoryboard(name:"Main", bundle:NSBundle.mainBundle()).instantiateInitialViewController();
         
-        scanner = BTScanner()
-        //scanner.setScanningViewController()
-        //scanner.setTableViewController()
-        scanner.start()
-        NSLog("DidFinishLaunching")
         return true
     }
 
