@@ -15,6 +15,7 @@
 		750A6F9C1BDBDC0800D7A715 /* BeaconScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6F9B1BDBDC0800D7A715 /* BeaconScannerTests.swift */; };
 		750A6FA71BDBDC0900D7A715 /* BeaconScannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6FA61BDBDC0900D7A715 /* BeaconScannerUITests.swift */; };
 		750A6FB51BDBDDED00D7A715 /* FoundBeaconsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6FB41BDBDDED00D7A715 /* FoundBeaconsViewController.swift */; };
+		A77E132A1BDBF0F000A66F22 /* searchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77E13291BDBF0F000A66F22 /* searchingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		750A6FA61BDBDC0900D7A715 /* BeaconScannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconScannerUITests.swift; sourceTree = "<group>"; };
 		750A6FA81BDBDC0900D7A715 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		750A6FB41BDBDDED00D7A715 /* FoundBeaconsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundBeaconsViewController.swift; sourceTree = "<group>"; };
+		A77E13291BDBF0F000A66F22 /* searchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = searchingViewController.swift; path = ../searchingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,10 +102,11 @@
 			isa = PBXGroup;
 			children = (
 				750A6F861BDBDC0800D7A715 /* AppDelegate.swift */,
+				A77E13291BDBF0F000A66F22 /* searchingViewController.swift */,
 				750A6F881BDBDC0800D7A715 /* ViewController.swift */,
 				750A6F8D1BDBDC0800D7A715 /* Assets.xcassets */,
-				750A6F8F1BDBDC0800D7A715 /* LaunchScreen.storyboard */,
 				750A6F8A1BDBDC0800D7A715 /* Main.storyboard */,
+				750A6F8F1BDBDC0800D7A715 /* LaunchScreen.storyboard */,
 				750A6FB41BDBDDED00D7A715 /* FoundBeaconsViewController.swift */,
 				750A6F921BDBDC0800D7A715 /* Info.plist */,
 			);
@@ -265,6 +268,7 @@
 				750A6F891BDBDC0800D7A715 /* ViewController.swift in Sources */,
 				750A6FB51BDBDDED00D7A715 /* FoundBeaconsViewController.swift in Sources */,
 				750A6F871BDBDC0800D7A715 /* AppDelegate.swift in Sources */,
+				A77E132A1BDBF0F000A66F22 /* searchingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +497,7 @@
 				750A6FAD1BDBDC0900D7A715 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		750A6FAE1BDBDC0900D7A715 /* Build configuration list for PBXNativeTarget "BeaconScannerTests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +506,7 @@
 				750A6FB01BDBDC0900D7A715 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		750A6FB11BDBDC0900D7A715 /* Build configuration list for PBXNativeTarget "BeaconScannerUITests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +515,7 @@
 				750A6FB31BDBDC0900D7A715 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
