@@ -85,22 +85,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hn7-lD-rLQ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="66"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kp-QD-dO2">
+                                        <rect key="frame" x="8" y="15" width="44" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="VAP-z7-tlW"/>
+                                            <constraint firstAttribute="width" constant="44" id="xZt-Kc-tyf"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Left_arrow_back_move_right"/>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="H2Z-NJ-i7W"/>
+                                    <constraint firstItem="7Kp-QD-dO2" firstAttribute="leading" secondItem="hn7-lD-rLQ" secondAttribute="leading" constant="8" id="L1R-AI-QMH"/>
+                                    <constraint firstAttribute="height" constant="66" id="t6q-t4-x6u"/>
+                                    <constraint firstItem="7Kp-QD-dO2" firstAttribute="centerY" secondItem="hn7-lD-rLQ" secondAttribute="centerY" id="v92-PR-nr8"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beacon200" translatesAutoresizingMaskIntoConstraints="NO" id="UcL-E9-cbz">
+                                <rect key="frame" x="262" y="277" width="77" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="0jo-wi-oG4"/>
+                                    <constraint firstAttribute="width" constant="77" id="pDU-r7-0q0"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hn7-lD-rLQ" firstAttribute="leading" secondItem="ykh-s1-WtE" secondAttribute="leadingMargin" constant="-20" id="4li-f5-vQc"/>
-                            <constraint firstItem="hn7-lD-rLQ" firstAttribute="width" secondItem="ykh-s1-WtE" secondAttribute="width" id="LtR-MK-n5s"/>
-                            <constraint firstItem="hn7-lD-rLQ" firstAttribute="top" secondItem="ykh-s1-WtE" secondAttribute="topMargin" id="ZCz-iP-jKW"/>
-                            <constraint firstItem="hn7-lD-rLQ" firstAttribute="centerX" secondItem="ykh-s1-WtE" secondAttribute="centerX" id="hnN-7R-uV5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hn7-lD-rLQ" secondAttribute="trailing" constant="-20" id="kjK-Fx-vHo"/>
+                            <constraint firstItem="UcL-E9-cbz" firstAttribute="centerX" secondItem="ykh-s1-WtE" secondAttribute="centerX" id="2iF-NN-c7L"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hn7-lD-rLQ" secondAttribute="trailing" constant="-20" id="2ok-BN-E7D"/>
+                            <constraint firstItem="UcL-E9-cbz" firstAttribute="centerY" secondItem="ykh-s1-WtE" secondAttribute="centerY" id="5M7-uW-CMv"/>
+                            <constraint firstItem="hn7-lD-rLQ" firstAttribute="top" secondItem="ykh-s1-WtE" secondAttribute="topMargin" id="5dL-wd-XhS"/>
+                            <constraint firstItem="hn7-lD-rLQ" firstAttribute="leading" secondItem="ykh-s1-WtE" secondAttribute="leadingMargin" constant="-20" id="lCL-5c-w8G"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="beaconSearchImage" destination="hn7-lD-rLQ" id="N4A-BF-0CL"/>
+                        <outlet property="searchingView" destination="ykh-s1-WtE" id="Ytn-6j-9vc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="edq-az-cHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -135,4 +158,8 @@
             <point key="canvasLocation" x="1058" y="1206"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Left_arrow_back_move_right" width="512" height="512"/>
+        <image name="beacon200" width="200" height="123"/>
+    </resources>
 </document>

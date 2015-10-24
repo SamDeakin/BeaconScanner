@@ -9,5 +9,20 @@
 import UIKit
 
 class searchingViewController: UIViewController {
+    
+    @IBOutlet weak var beaconSearchImage: UIView!
+    @IBOutlet var searchingView: UIView!
+    
+    override func viewDidLoad() {
+        let pulseEffect = LFTPulseAnimation(repeatCount: Float.infinity, radius:150, position:searchingView.center)
+        pulseEffect.pulseInterval = 0
+        pulseEffect.backgroundColor = UIColor(
+            red: 0.086,
+            green: 0.494,
+            blue: 0.984,
+            alpha: 1.0
+            ).CGColor
+        searchingView.layer.insertSublayer(pulseEffect, below: beaconSearchImage.layer)
+    }
 
 }
