@@ -23,8 +23,16 @@ class FoundBeaconsViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell : UITableViewCell? = tableView.dequeueReusableCellWithIdentifier("Beacon")! as UITableViewCell
+        
+        if (cell == nil) {
+            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "Beacon")
+        }
         
         
+        
+        
+        return cell!;
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
