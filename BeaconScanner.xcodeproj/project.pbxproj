@@ -105,8 +105,8 @@
 			children = (
 				750A6F861BDBDC0800D7A715 /* AppDelegate.swift */,
 				A77E13291BDBF0F000A66F22 /* searchingViewController.swift */,
+				750A6FB41BDBDDED00D7A715 /* FoundBeaconsViewController.swift */,
 				750A6F881BDBDC0800D7A715 /* ViewController.swift */,
-				750A6F8D1BDBDC0800D7A715 /* Assets.xcassets */,
 				750A6F8A1BDBDC0800D7A715 /* Main.storyboard */,
 				750A6F8F1BDBDC0800D7A715 /* LaunchScreen.storyboard */,
 				750A6FB41BDBDDED00D7A715 /* FoundBeaconsViewController.swift */,
