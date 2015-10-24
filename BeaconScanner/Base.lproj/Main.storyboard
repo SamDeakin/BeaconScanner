@@ -84,6 +84,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beacon200" translatesAutoresizingMaskIntoConstraints="NO" id="UcL-E9-cbz">
+                                <rect key="frame" x="262" y="277" width="77" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="0jo-wi-oG4"/>
+                                    <constraint firstAttribute="width" constant="77" id="pDU-r7-0q0"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hn7-lD-rLQ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="66"/>
                                 <subviews>
@@ -94,6 +101,9 @@
                                             <constraint firstAttribute="width" constant="44" id="xZt-Kc-tyf"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="Left_arrow_back_move_right"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="doi-zh-LeC"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -103,13 +113,6 @@
                                     <constraint firstItem="7Kp-QD-dO2" firstAttribute="centerY" secondItem="hn7-lD-rLQ" secondAttribute="centerY" id="v92-PR-nr8"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beacon200" translatesAutoresizingMaskIntoConstraints="NO" id="UcL-E9-cbz">
-                                <rect key="frame" x="262" y="277" width="77" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="0jo-wi-oG4"/>
-                                    <constraint firstAttribute="width" constant="77" id="pDU-r7-0q0"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -121,8 +124,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="beaconSearchImage" destination="hn7-lD-rLQ" id="N4A-BF-0CL"/>
+                        <outlet property="beaconSearchIcon" destination="5M7-uW-CMv" id="PUu-MU-aAJ"/>
                         <outlet property="searchingView" destination="ykh-s1-WtE" id="Ytn-6j-9vc"/>
+                        <outlet property="topNav" destination="hn7-lD-rLQ" id="VHE-Bc-Ed9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="edq-az-cHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
