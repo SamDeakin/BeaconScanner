@@ -15,8 +15,18 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="T7C-FU-ChF">
+                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="T7C-FU-ChF" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="15C-AA-3R8"/>
+                            <constraint firstItem="T7C-FU-ChF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="hsR-bo-SJq"/>
+                            <constraint firstItem="T7C-FU-ChF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="vmU-5Q-oEn"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +34,7 @@
             <point key="canvasLocation" x="293" y="570"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="test" width="452" height="187"/>
+    </resources>
 </document>
