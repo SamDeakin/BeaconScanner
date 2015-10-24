@@ -40,19 +40,38 @@ class FoundBeaconsViewController: UITableViewController {
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // This is assuming every beacon will take up 1 cell so we only need one section to deal with each beacon
-        return 1;
+        return 1
     }
     
     //override func
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         // Currently no table section headers
-        return nil;
+        return nil
+    }
+    
+    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        return 10
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        return 10
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+            
+    }
+    
+    func numberOfRowsInSection(section: Int) -> Int {
+        // Assuming the first section is the only one ever requested
+        return beacons.count;
     }
     
     override func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         // Curretnly no table section footers
-        return nil;
+        return nil
     }
     
     func foundBeacons(found: [CLBeacon]) {
