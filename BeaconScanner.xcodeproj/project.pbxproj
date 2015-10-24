@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		012078E11BDC27130086A6F4 /* LFTPulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012078E01BDC27130086A6F4 /* LFTPulseAnimation.swift */; };
 		750A6F871BDBDC0800D7A715 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6F861BDBDC0800D7A715 /* AppDelegate.swift */; };
 		750A6F891BDBDC0800D7A715 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6F881BDBDC0800D7A715 /* ViewController.swift */; };
 		750A6F8C1BDBDC0800D7A715 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 750A6F8A1BDBDC0800D7A715 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		012078E01BDC27130086A6F4 /* LFTPulseAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFTPulseAnimation.swift; sourceTree = "<group>"; };
 		750A6F831BDBDC0800D7A715 /* BeaconScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		750A6F861BDBDC0800D7A715 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		750A6F881BDBDC0800D7A715 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				750A6F861BDBDC0800D7A715 /* AppDelegate.swift */,
+				012078E01BDC27130086A6F4 /* LFTPulseAnimation.swift */,
 				A77E13291BDBF0F000A66F22 /* searchingViewController.swift */,
 				750A6F881BDBDC0800D7A715 /* ViewController.swift */,
 				750A6F8A1BDBDC0800D7A715 /* Main.storyboard */,
@@ -204,7 +207,7 @@
 				TargetAttributes = {
 					750A6F821BDBDC0800D7A715 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 98SA93Z838;
+						DevelopmentTeam = X4Z3ZKKV48;
 					};
 					750A6F961BDBDC0800D7A715 = {
 						CreatedOnToolsVersion = 7.1;
@@ -274,6 +277,7 @@
 				750A6F891BDBDC0800D7A715 /* ViewController.swift in Sources */,
 				750A6FB51BDBDDED00D7A715 /* FoundBeaconsViewController.swift in Sources */,
 				750A6FB91BDBF05100D7A715 /* BTScanner.swift in Sources */,
+				012078E11BDC27130086A6F4 /* LFTPulseAnimation.swift in Sources */,
 				750A6F871BDBDC0800D7A715 /* AppDelegate.swift in Sources */,
 				A77E132A1BDBF0F000A66F22 /* searchingViewController.swift in Sources */,
 			);
@@ -415,11 +419,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BeaconScanner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NAH.BeaconScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -428,11 +435,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BeaconScanner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NAH.BeaconScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
