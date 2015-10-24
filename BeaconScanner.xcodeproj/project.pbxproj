@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		015F38941BDC20430063487F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015F38931BDC20430063487F /* AudioToolbox.framework */; };
+		015F38961BDC20500063487F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015F38951BDC20500063487F /* CFNetwork.framework */; };
+		015F38981BDC20640063487F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015F38971BDC20640063487F /* CoreGraphics.framework */; };
+		015F389A1BDC206B0063487F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015F38991BDC206B0063487F /* CoreLocation.framework */; };
+		015F389C1BDC20740063487F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015F389B1BDC20740063487F /* QuartzCore.framework */; };
+		015F389E1BDC207C0063487F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015F389D1BDC207C0063487F /* Security.framework */; };
+		015F38A01BDC20830063487F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015F389F1BDC20830063487F /* StoreKit.framework */; };
+		015F38A21BDC20A90063487F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015F38A11BDC20A90063487F /* SystemConfiguration.framework */; };
+		015F38A41BDC20B50063487F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 015F38A31BDC20B50063487F /* libz.tbd */; };
+		015F38A61BDC20C70063487F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 015F38A51BDC20C70063487F /* libsqlite3.tbd */; };
 		44B84A4BACF6EC0DB498E2D8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E916A3D0C402727CBD668B96 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		750A6F871BDBDC0800D7A715 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6F861BDBDC0800D7A715 /* AppDelegate.swift */; };
 		750A6F891BDBDC0800D7A715 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6F881BDBDC0800D7A715 /* ViewController.swift */; };
@@ -39,6 +49,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		015F38931BDC20430063487F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		015F38951BDC20500063487F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		015F38971BDC20640063487F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		015F38991BDC206B0063487F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		015F389B1BDC20740063487F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		015F389D1BDC207C0063487F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		015F389F1BDC20830063487F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		015F38A11BDC20A90063487F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		015F38A31BDC20B50063487F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		015F38A51BDC20C70063487F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		750A6F831BDBDC0800D7A715 /* BeaconScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		750A6F861BDBDC0800D7A715 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		750A6F881BDBDC0800D7A715 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +86,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				015F38A61BDC20C70063487F /* libsqlite3.tbd in Frameworks */,
+				015F38A41BDC20B50063487F /* libz.tbd in Frameworks */,
+				015F38A21BDC20A90063487F /* SystemConfiguration.framework in Frameworks */,
+				015F38A01BDC20830063487F /* StoreKit.framework in Frameworks */,
+				015F389E1BDC207C0063487F /* Security.framework in Frameworks */,
+				015F389C1BDC20740063487F /* QuartzCore.framework in Frameworks */,
+				015F389A1BDC206B0063487F /* CoreLocation.framework in Frameworks */,
+				015F38981BDC20640063487F /* CoreGraphics.framework in Frameworks */,
+				015F38961BDC20500063487F /* CFNetwork.framework in Frameworks */,
+				015F38941BDC20430063487F /* AudioToolbox.framework in Frameworks */,
 				44B84A4BACF6EC0DB498E2D8 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,6 +129,16 @@
 		3E5DF359E131074C804929BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				015F38A51BDC20C70063487F /* libsqlite3.tbd */,
+				015F38A31BDC20B50063487F /* libz.tbd */,
+				015F38A11BDC20A90063487F /* SystemConfiguration.framework */,
+				015F389F1BDC20830063487F /* StoreKit.framework */,
+				015F389D1BDC207C0063487F /* Security.framework */,
+				015F389B1BDC20740063487F /* QuartzCore.framework */,
+				015F38991BDC206B0063487F /* CoreLocation.framework */,
+				015F38971BDC20640063487F /* CoreGraphics.framework */,
+				015F38951BDC20500063487F /* CFNetwork.framework */,
+				015F38931BDC20430063487F /* AudioToolbox.framework */,
 				E916A3D0C402727CBD668B96 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -231,7 +271,7 @@
 				TargetAttributes = {
 					750A6F821BDBDC0800D7A715 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 98SA93Z838;
+						DevelopmentTeam = X4Z3ZKKV48;
 					};
 					750A6F961BDBDC0800D7A715 = {
 						CreatedOnToolsVersion = 7.1;
@@ -491,11 +531,14 @@
 			baseConfigurationReference = F044AF5AE4BA638EBB6EAB26 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BeaconScanner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NAH.BeaconScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -505,11 +548,14 @@
 			baseConfigurationReference = 79A0A77CDBAD4268B078159D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BeaconScanner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NAH.BeaconScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
