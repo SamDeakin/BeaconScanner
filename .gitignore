@@ -1,3 +1,5 @@
+.DS_Store
+
 BeaconScanner.xcodeproj/project.xcworkspace/xcuserdata/*
 BeaconScanner.xcodeproj/xcuserdata/*
 Podfile.lock
