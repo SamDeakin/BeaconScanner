@@ -15,6 +15,7 @@
 		750A6F9C1BDBDC0800D7A715 /* BeaconScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6F9B1BDBDC0800D7A715 /* BeaconScannerTests.swift */; };
 		750A6FA71BDBDC0900D7A715 /* BeaconScannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6FA61BDBDC0900D7A715 /* BeaconScannerUITests.swift */; };
 		750A6FB51BDBDDED00D7A715 /* FoundBeaconsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6FB41BDBDDED00D7A715 /* FoundBeaconsViewController.swift */; };
+		A77E132A1BDBF0F000A66F22 /* searchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77E13291BDBF0F000A66F22 /* searchingViewController.swift */; };
 		750A6FB91BDBF05100D7A715 /* BTScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6FB81BDBF05100D7A715 /* BTScanner.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		750A6FA61BDBDC0900D7A715 /* BeaconScannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconScannerUITests.swift; sourceTree = "<group>"; };
 		750A6FA81BDBDC0900D7A715 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		750A6FB41BDBDDED00D7A715 /* FoundBeaconsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundBeaconsViewController.swift; sourceTree = "<group>"; };
+		A77E13291BDBF0F000A66F22 /* searchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = searchingViewController.swift; path = ../searchingViewController.swift; sourceTree = "<group>"; };
 		750A6FB81BDBF05100D7A715 /* BTScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTScanner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
