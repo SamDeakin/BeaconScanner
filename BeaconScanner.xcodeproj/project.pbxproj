@@ -14,6 +14,7 @@
 		750A6F911BDBDC0800D7A715 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 750A6F8F1BDBDC0800D7A715 /* LaunchScreen.storyboard */; };
 		750A6F9C1BDBDC0800D7A715 /* BeaconScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6F9B1BDBDC0800D7A715 /* BeaconScannerTests.swift */; };
 		750A6FA71BDBDC0900D7A715 /* BeaconScannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6FA61BDBDC0900D7A715 /* BeaconScannerUITests.swift */; };
+		750A6FB51BDBDDED00D7A715 /* FoundBeaconsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6FB41BDBDDED00D7A715 /* FoundBeaconsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		750A6FA21BDBDC0900D7A715 /* BeaconScannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaconScannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		750A6FA61BDBDC0900D7A715 /* BeaconScannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconScannerUITests.swift; sourceTree = "<group>"; };
 		750A6FA81BDBDC0900D7A715 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		750A6FB41BDBDDED00D7A715 /* FoundBeaconsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundBeaconsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +101,10 @@
 			children = (
 				750A6F861BDBDC0800D7A715 /* AppDelegate.swift */,
 				750A6F881BDBDC0800D7A715 /* ViewController.swift */,
-				750A6F8A1BDBDC0800D7A715 /* Main.storyboard */,
 				750A6F8D1BDBDC0800D7A715 /* Assets.xcassets */,
 				750A6F8F1BDBDC0800D7A715 /* LaunchScreen.storyboard */,
+				750A6F8A1BDBDC0800D7A715 /* Main.storyboard */,
+				750A6FB41BDBDDED00D7A715 /* FoundBeaconsViewController.swift */,
 				750A6F921BDBDC0800D7A715 /* Info.plist */,
 			);
 			path = BeaconScanner;
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				750A6F891BDBDC0800D7A715 /* ViewController.swift in Sources */,
+				750A6FB51BDBDDED00D7A715 /* FoundBeaconsViewController.swift in Sources */,
 				750A6F871BDBDC0800D7A715 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,9 +405,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BeaconScanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NAH.BeaconScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -412,9 +418,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BeaconScanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NAH.BeaconScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
