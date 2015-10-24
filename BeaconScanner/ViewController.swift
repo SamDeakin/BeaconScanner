@@ -10,16 +10,34 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    func styleUI() {
+        let smartRange = NSRange(location: 0, length: 5)
+        let smartTitle = NSMutableAttributedString(string: "SMARTshop")
+        smartTitle.addAttribute(NSStrokeColorAttributeName, value: UIColor.blackColor(), range: smartRange)
+        smartTitle.addAttribute(NSForegroundColorAttributeName, value: UIColor(
+            red: 0.086,
+            green: 0.494,
+            blue: 0.984,
+            alpha: 1.0
+            ), range : smartRange)
+        smartTitle.addAttribute(NSFontAttributeName, value: UIFont.systemFontOfSize(50, weight: -1), range: smartRange)
+        smartTitle.addAttribute(NSStrokeWidthAttributeName, value: NSNumber(float: -1.0), range: smartRange)
+        
+        
+        titleLabel.attributedText = smartTitle
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        styleUI()
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
 }
 

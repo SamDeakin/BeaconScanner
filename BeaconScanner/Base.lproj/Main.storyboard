@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,12 +17,73 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Username?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAQ-Y4-TyG">
+                                <rect key="frame" x="20" y="20" width="97" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDq-C3-O92">
+                                <rect key="frame" x="91" y="271" width="419" height="57"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="OU1-SF-xKl"/>
+                                    <constraint firstAttribute="width" secondItem="fDq-C3-O92" secondAttribute="height" multiplier="419:57" id="myJ-pR-vmS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Start Searching!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="u4z-go-vq2" kind="show" id="qfC-m4-qer"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SMARTshop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAz-ik-Chg">
+                                <rect key="frame" x="211" y="153" width="178" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="rAQ-Y4-TyG" secondAttribute="leading" id="FTJ-Gk-V5L"/>
+                            <constraint firstItem="rAQ-Y4-TyG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="HTH-uK-hPM"/>
+                            <constraint firstItem="fDq-C3-O92" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IMg-Mg-kvy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fDq-C3-O92" secondAttribute="trailing" constant="70" id="JMc-Wl-XxL"/>
+                            <constraint firstItem="fDq-C3-O92" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vq3-NZ-ws8"/>
+                            <constraint firstItem="fDq-C3-O92" firstAttribute="top" secondItem="gAz-ik-Chg" secondAttribute="bottom" constant="63" id="YHI-4I-D84"/>
+                            <constraint firstItem="gAz-ik-Chg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="anN-AJ-sGb"/>
+                            <constraint firstItem="fDq-C3-O92" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="71" id="qog-5v-BXi"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="gAz-ik-Chg" id="M1m-80-9dK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="395" y="522"/>
+        </scene>
+        <!--Searching View Controller-->
+        <scene sceneID="66D-Af-fTr">
+            <objects>
+                <viewController id="u4z-go-vq2" customClass="searchingViewController" customModule="BeaconScanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E7x-XT-oX8"/>
+                        <viewControllerLayoutGuide type="bottom" id="O6u-D2-WE2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ykh-s1-WtE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="edq-az-cHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1058" y="522"/>
         </scene>
         <!--Found Beacons View Controller-->
         <scene sceneID="w8Z-2B-3Mw">
@@ -48,7 +111,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWN-Nc-eYX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1077" y="522"/>
+            <point key="canvasLocation" x="1058" y="1206"/>
         </scene>
     </scenes>
 </document>
