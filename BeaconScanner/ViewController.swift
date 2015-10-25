@@ -83,7 +83,6 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     // This method is called by BTScanner
     func beaconFound(beacon: CLBeacon) {
         cbeacon = beacon
-        NSLog("beaconFound: %@, %@, %@", beacon.major, beacon.minor, beacon.proximityUUID)
         if let data = BeaconInfoController.getObjectForBeacon(cbeacon!.major, minor: cbeacon!.minor, proximityUUID: cbeacon!.proximityUUID) {
             self.beacon = data
             rating = BeaconInfoController.getRatingForBeacon(data.id)
@@ -94,7 +93,6 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     
     func showBeacon() {
         // Hide popupView if it is already shown, then show new
-        NSLog("showBeacon")
         if (!popupView.hidden) {
             overlayLeavingAnimation()
         } else {
@@ -136,7 +134,6 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     }
     
     func updateAndShowPopupView() {
-        NSLog("updateAndShowPopupView")
         //update pictures and shit
         //self.popupImage.image = UIImage(named: "zebra")
         //self.popupDataTitle.text = "Zebra"

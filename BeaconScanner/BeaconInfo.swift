@@ -61,13 +61,9 @@ class BeaconInfoController {
             Comment(commentId: "Pink", targetId: "7103-32098", rating: 1, content: "It doesn't come in pink", username: "Tom")]]
     
     class func getObjectForBeacon(major: NSNumber, minor: NSNumber, proximityUUID: NSUUID) -> Beacon? {
-        NSLog("getObjectForBeacon: %@, %@, %@", major, minor, proximityUUID)
         if let index = self.minor.indexOf(minor) {
-            NSLog("%@", img)
-            NSLog("%@, %@, %@", UIImage(named:"BalloonFort")!, UIImage(named:"Fern")!, UIImage(named:"GlitterPumpkin")!)
             return Beacon(id: "\(major)-\(minor)", title: title[index], desc: description[index], img: UIImage(named:img[index])!)
         } else {
-            NSLog("nil")
             return nil
         }
     }

@@ -44,7 +44,6 @@ class BTScanner: NSObject, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
         // beacons is the array of beacons found
-        NSLog("%@", beacons)
         if (beacons.count > 0) {
             handleFirstBeacon(beacons[0])
         }
@@ -52,7 +51,6 @@ class BTScanner: NSObject, CLLocationManagerDelegate {
     
     // if closestBeacon is nil or if beacon is not the same as it then notify delegate
     private func handleFirstBeacon(beacon: CLBeacon) {
-        NSLog("handleFirstBeacon")
         if let old = closestBeacon {
             // closestBeacon has been set before
             if (old.major != beacon.major || old.minor != beacon.minor) { // We can ignore proximity UUID for this app
@@ -71,7 +69,6 @@ class BTScanner: NSObject, CLLocationManagerDelegate {
     // set closestBeacon to beacon then send to delegate
     private func notifyDelegate(beacon: CLBeacon) {
         closestBeacon = beacon
-        NSLog("notifyDelegate")
         if let scanningView = delegate {
             // notify here because delegate is not nil
             scanningView.beaconFound(beacon)
