@@ -13,6 +13,18 @@
 		012078E91BDC54F80086A6F4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012078E81BDC54F80086A6F4 /* User.swift */; };
 		012078EB1BDC552A0086A6F4 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012078EA1BDC552A0086A6F4 /* Comment.swift */; };
 		012078ED1BDC57090086A6F4 /* NewCommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012078EC1BDC57090086A6F4 /* NewCommentController.swift */; };
+		012079111BDC6BC10086A6F4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012079101BDC6BC10086A6F4 /* CFNetwork.framework */; };
+		012079131BDC6BCB0086A6F4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012079121BDC6BCB0086A6F4 /* CoreGraphics.framework */; };
+		012079151BDC6BD40086A6F4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012079141BDC6BD40086A6F4 /* CoreLocation.framework */; };
+		012079171BDC6BDC0086A6F4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012079161BDC6BDC0086A6F4 /* QuartzCore.framework */; };
+		012079191BDC6BE40086A6F4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012079181BDC6BE40086A6F4 /* Security.framework */; };
+		0120791B1BDC6BEB0086A6F4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0120791A1BDC6BEB0086A6F4 /* StoreKit.framework */; };
+		0120791D1BDC6BF50086A6F4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0120791C1BDC6BF50086A6F4 /* SystemConfiguration.framework */; };
+		0120791F1BDC6BFD0086A6F4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0120791E1BDC6BFD0086A6F4 /* libz.tbd */; };
+		012079211BDC6C060086A6F4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 012079201BDC6C060086A6F4 /* libsqlite3.tbd */; };
+		012079231BDC6C110086A6F4 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012079221BDC6C110086A6F4 /* Accounts.framework */; };
+		012079251BDC6C1B0086A6F4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012079241BDC6C1B0086A6F4 /* Social.framework */; };
+		1626988F30BB606D8A4580FE /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3C0CBCB745174E42701B79 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		750A6F871BDBDC0800D7A715 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6F861BDBDC0800D7A715 /* AppDelegate.swift */; };
 		750A6F891BDBDC0800D7A715 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6F881BDBDC0800D7A715 /* ViewController.swift */; };
 		750A6F8C1BDBDC0800D7A715 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 750A6F8A1BDBDC0800D7A715 /* Main.storyboard */; };
@@ -23,7 +35,6 @@
 		750A6FB51BDBDDED00D7A715 /* FoundBeaconsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6FB41BDBDDED00D7A715 /* FoundBeaconsViewController.swift */; };
 		750A6FB91BDBF05100D7A715 /* BTScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6FB81BDBF05100D7A715 /* BTScanner.swift */; };
 		750A6FBB1BDC1D8700D7A715 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 750A6FBA1BDC1D8700D7A715 /* Assets.xcassets */; };
-		A7D014BE4DC23CFE54157769 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834454AADB4D089131318A8F /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +61,19 @@
 		012078E81BDC54F80086A6F4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		012078EA1BDC552A0086A6F4 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		012078EC1BDC57090086A6F4 /* NewCommentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCommentController.swift; sourceTree = "<group>"; };
+		012079101BDC6BC10086A6F4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		012079121BDC6BCB0086A6F4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		012079141BDC6BD40086A6F4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		012079161BDC6BDC0086A6F4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		012079181BDC6BE40086A6F4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		0120791A1BDC6BEB0086A6F4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		0120791C1BDC6BF50086A6F4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0120791E1BDC6BFD0086A6F4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		012079201BDC6C060086A6F4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		012079221BDC6C110086A6F4 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		012079241BDC6C1B0086A6F4 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		209C5EFF652FFF1A2C36CC55 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		2C3C0CBCB745174E42701B79 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		750A6F831BDBDC0800D7A715 /* BeaconScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		750A6F861BDBDC0800D7A715 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		750A6F881BDBDC0800D7A715 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +90,6 @@
 		750A6FB41BDBDDED00D7A715 /* FoundBeaconsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundBeaconsViewController.swift; sourceTree = "<group>"; };
 		750A6FB81BDBF05100D7A715 /* BTScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTScanner.swift; sourceTree = "<group>"; };
 		750A6FBA1BDC1D8700D7A715 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		834454AADB4D089131318A8F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB985D5901DD4A02052A86D2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,7 +98,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7D014BE4DC23CFE54157769 /* Pods.framework in Frameworks */,
+				012079251BDC6C1B0086A6F4 /* Social.framework in Frameworks */,
+				012079231BDC6C110086A6F4 /* Accounts.framework in Frameworks */,
+				012079211BDC6C060086A6F4 /* libsqlite3.tbd in Frameworks */,
+				0120791F1BDC6BFD0086A6F4 /* libz.tbd in Frameworks */,
+				0120791D1BDC6BF50086A6F4 /* SystemConfiguration.framework in Frameworks */,
+				0120791B1BDC6BEB0086A6F4 /* StoreKit.framework in Frameworks */,
+				012079191BDC6BE40086A6F4 /* Security.framework in Frameworks */,
+				012079171BDC6BDC0086A6F4 /* QuartzCore.framework in Frameworks */,
+				012079151BDC6BD40086A6F4 /* CoreLocation.framework in Frameworks */,
+				012079131BDC6BCB0086A6F4 /* CoreGraphics.framework in Frameworks */,
+				012079111BDC6BC10086A6F4 /* CFNetwork.framework in Frameworks */,
+				1626988F30BB606D8A4580FE /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,7 +203,18 @@
 		FCDE1FFB8E389F7FBCB44195 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				834454AADB4D089131318A8F /* Pods.framework */,
+				012079241BDC6C1B0086A6F4 /* Social.framework */,
+				012079221BDC6C110086A6F4 /* Accounts.framework */,
+				012079201BDC6C060086A6F4 /* libsqlite3.tbd */,
+				0120791E1BDC6BFD0086A6F4 /* libz.tbd */,
+				0120791C1BDC6BF50086A6F4 /* SystemConfiguration.framework */,
+				0120791A1BDC6BEB0086A6F4 /* StoreKit.framework */,
+				012079181BDC6BE40086A6F4 /* Security.framework */,
+				012079161BDC6BDC0086A6F4 /* QuartzCore.framework */,
+				012079141BDC6BD40086A6F4 /* CoreLocation.framework */,
+				012079121BDC6BCB0086A6F4 /* CoreGraphics.framework */,
+				012079101BDC6BC10086A6F4 /* CFNetwork.framework */,
+				2C3C0CBCB745174E42701B79 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -186,8 +230,8 @@
 				750A6F7F1BDBDC0800D7A715 /* Sources */,
 				750A6F801BDBDC0800D7A715 /* Frameworks */,
 				750A6F811BDBDC0800D7A715 /* Resources */,
-				D3CFDB50B6D522EC411B5D91 /* Embed Pods Frameworks */,
 				D718BFFED921287F7154E295 /* Copy Pods Resources */,
+				7920E4294E80A7E110AFA41E /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,7 +353,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D3CFDB50B6D522EC411B5D91 /* Embed Pods Frameworks */ = {
+		7920E4294E80A7E110AFA41E /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
