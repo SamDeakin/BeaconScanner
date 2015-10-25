@@ -30,7 +30,7 @@ class BeaconInfoController {
         "-Incredibly cool\n-Everyone will want to come over\n-Not safe for playing darts/storing porcupines/knife fights",
         "-May or may not be real\n-May or may not attempt to kill you when you turn around",
         "-You know you need this in your life"]
-    static let img = [UIImage(named:"BalloonFort"), UIImage(named:"Fern"), UIImage(named:"Pumpkin")]
+    static let img = ["BalloonFort", "Fern", "GlitterPumpkin"]
     
     // TODO get rating by averaging comment ratings
     static let rating: [Double] = [4.4, 1.2, 5]
@@ -61,9 +61,13 @@ class BeaconInfoController {
             Comment(commentId: "Pink", targetId: "7103-32098", rating: 1, content: "It doesn't come in pink", username: "Tom")]]
     
     class func getObjectForBeacon(major: NSNumber, minor: NSNumber, proximityUUID: NSUUID) -> Beacon? {
-        if let index = self.minor.indexOf(minor) where self.minor == minor && self.proximityUUID!.UUIDString == proximityUUID.UUIDString {
-            return Beacon(id: "\(major)-\(minor)", title: title[index], desc: description[index], img: img[index]!)
+        NSLog("getObjectForBeacon: %@, %@, %@", major, minor, proximityUUID)
+        if let index = self.minor.indexOf(minor) {
+            NSLog("%@", img)
+            NSLog("%@, %@, %@", UIImage(named:"BalloonFort")!, UIImage(named:"Fern")!, UIImage(named:"GlitterPumpkin")!)
+            return Beacon(id: "\(major)-\(minor)", title: title[index], desc: description[index], img: UIImage(named:img[index])!)
         } else {
+            NSLog("nil")
             return nil
         }
     }
