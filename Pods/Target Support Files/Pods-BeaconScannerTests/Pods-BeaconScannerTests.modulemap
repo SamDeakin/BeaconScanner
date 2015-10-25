@@ -1,6 +1,0 @@
-framework module Pods_BeaconScannerTests {
-  umbrella header "Pods-BeaconScannerTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
