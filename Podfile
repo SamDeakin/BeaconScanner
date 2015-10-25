@@ -3,7 +3,7 @@ platform :ios, '9.0'
 
 xcodeproj 'BeaconScanner'
 
-target 'BeaconScanner', :exclusive => true do
+target :BeaconScanner, :exclusive => true do
 
 pod 'Parse'
 pod 'ParseUI'
