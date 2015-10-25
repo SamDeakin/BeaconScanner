@@ -1,11 +1,3 @@
-//
-//  BTScanner.swift
-//  BeaconScanner
-//
-//  Created by Sam Deakin on 2015-10-24.
-//  Copyright © 2015 Names Are Hard. All rights reserved.
-//
-
 import Foundation
 import CoreLocation
 
@@ -97,3 +89,4 @@ class BTScanner: NSObject, CLLocationManagerDelegate {
         }
     }
 }
+

@@ -44,7 +44,6 @@ class ViewController: UIViewController {
         if let identifier = segue.identifier {
             switch(identifier) {
             case "startScanning":
-                
                 return
             default:
                 return

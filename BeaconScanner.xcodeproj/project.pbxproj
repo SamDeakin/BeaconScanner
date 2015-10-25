@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		012078E11BDC27130086A6F4 /* LFTPulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012078E01BDC27130086A6F4 /* LFTPulseAnimation.swift */; };
-		012078E31BDC2AE10086A6F4 /* searchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012078E21BDC2AE10086A6F4 /* searchingViewController.swift */; };
 		012078E51BDC4FBC0086A6F4 /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012078E41BDC4FBC0086A6F4 /* Beacon.swift */; };
 		012078E91BDC54F80086A6F4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012078E81BDC54F80086A6F4 /* User.swift */; };
 		012078EB1BDC552A0086A6F4 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012078EA1BDC552A0086A6F4 /* Comment.swift */; };
@@ -25,6 +24,7 @@
 		750A6FBB1BDC1D8700D7A715 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 750A6FBA1BDC1D8700D7A715 /* Assets.xcassets */; };
 		750A6FBD1BDC640400D7A715 /* BeaconInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6FBC1BDC640400D7A715 /* BeaconInfo.swift */; };
 		A7D014BE4DC23CFE54157769 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834454AADB4D089131318A8F /* Pods.framework */; };
+		A77E13361BDC291400A66F22 /* searchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77E13351BDC291400A66F22 /* searchingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,6 @@
 
 /* Begin PBXFileReference section */
 		012078E01BDC27130086A6F4 /* LFTPulseAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFTPulseAnimation.swift; sourceTree = "<group>"; };
-		012078E21BDC2AE10086A6F4 /* searchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchingViewController.swift; sourceTree = "<group>"; };
 		012078E41BDC4FBC0086A6F4 /* Beacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
 		012078E81BDC54F80086A6F4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		012078EA1BDC552A0086A6F4 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -71,6 +70,7 @@
 		750A6FBC1BDC640400D7A715 /* BeaconInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconInfo.swift; sourceTree = "<group>"; };
 		834454AADB4D089131318A8F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB985D5901DD4A02052A86D2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A77E13351BDC291400A66F22 /* searchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +135,8 @@
 			children = (
 				750A6F861BDBDC0800D7A715 /* AppDelegate.swift */,
 				012078E01BDC27130086A6F4 /* LFTPulseAnimation.swift */,
-				012078E21BDC2AE10086A6F4 /* searchingViewController.swift */,
 				750A6F881BDBDC0800D7A715 /* ViewController.swift */,
+				A77E13351BDC291400A66F22 /* searchingViewController.swift */,
 				750A6F8A1BDBDC0800D7A715 /* Main.storyboard */,
 				750A6F8F1BDBDC0800D7A715 /* LaunchScreen.storyboard */,
 				750A6FB41BDBDDED00D7A715 /* FoundBeaconsViewController.swift */,
@@ -374,7 +374,7 @@
 				012078EB1BDC552A0086A6F4 /* Comment.swift in Sources */,
 				012078E91BDC54F80086A6F4 /* User.swift in Sources */,
 				750A6F871BDBDC0800D7A715 /* AppDelegate.swift in Sources */,
-				012078E31BDC2AE10086A6F4 /* searchingViewController.swift in Sources */,
+				A77E13361BDC291400A66F22 /* searchingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
