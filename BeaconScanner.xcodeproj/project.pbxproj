@@ -23,6 +23,7 @@
 		750A6FB51BDBDDED00D7A715 /* FoundBeaconsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6FB41BDBDDED00D7A715 /* FoundBeaconsViewController.swift */; };
 		750A6FB91BDBF05100D7A715 /* BTScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6FB81BDBF05100D7A715 /* BTScanner.swift */; };
 		750A6FBB1BDC1D8700D7A715 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 750A6FBA1BDC1D8700D7A715 /* Assets.xcassets */; };
+		750A6FBD1BDC640400D7A715 /* BeaconInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6FBC1BDC640400D7A715 /* BeaconInfo.swift */; };
 		A7D014BE4DC23CFE54157769 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834454AADB4D089131318A8F /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		750A6FB41BDBDDED00D7A715 /* FoundBeaconsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundBeaconsViewController.swift; sourceTree = "<group>"; };
 		750A6FB81BDBF05100D7A715 /* BTScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTScanner.swift; sourceTree = "<group>"; };
 		750A6FBA1BDC1D8700D7A715 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		750A6FBC1BDC640400D7A715 /* BeaconInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconInfo.swift; sourceTree = "<group>"; };
 		834454AADB4D089131318A8F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB985D5901DD4A02052A86D2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +137,7 @@
 				012078E01BDC27130086A6F4 /* LFTPulseAnimation.swift */,
 				012078E21BDC2AE10086A6F4 /* searchingViewController.swift */,
 				750A6F881BDBDC0800D7A715 /* ViewController.swift */,
+				750A6FBC1BDC640400D7A715 /* BeaconInfo.swift */,
 				750A6F8A1BDBDC0800D7A715 /* Main.storyboard */,
 				750A6F8F1BDBDC0800D7A715 /* LaunchScreen.storyboard */,
 				750A6FB41BDBDDED00D7A715 /* FoundBeaconsViewController.swift */,
@@ -366,6 +369,7 @@
 				012078ED1BDC57090086A6F4 /* NewCommentController.swift in Sources */,
 				750A6FB91BDBF05100D7A715 /* BTScanner.swift in Sources */,
 				012078E11BDC27130086A6F4 /* LFTPulseAnimation.swift in Sources */,
+				750A6FBD1BDC640400D7A715 /* BeaconInfo.swift in Sources */,
 				012078E51BDC4FBC0086A6F4 /* Beacon.swift in Sources */,
 				012078EB1BDC552A0086A6F4 /* Comment.swift in Sources */,
 				012078E91BDC54F80086A6F4 /* User.swift in Sources */,
