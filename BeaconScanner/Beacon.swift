@@ -12,10 +12,12 @@ class Beacon {
   var id: String
   var title: String
   var desc: String
+  var img: UIImage
   
-  init?(id: String, title: String, desc: String) {
+  init?(id: String, title: String, desc: String, img: UIImage) {
     self.id = id
     self.title = title
     self.desc = desc
+    self.img = img
   }
 }
