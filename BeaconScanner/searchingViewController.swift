@@ -12,6 +12,11 @@ class searchingViewController: UIViewController {
     
     @IBOutlet weak var beaconSearchImage: UIView!
     @IBOutlet var searchingView: UIView!
+    @IBOutlet weak var backToMainButton: UIButton!
+    
+    func styleUI() {
+        
+    }
     
     override func viewDidLoad() {
         let pulseEffect = LFTPulseAnimation(repeatCount: Float.infinity, radius:150, position:searchingView.center)
@@ -23,6 +28,8 @@ class searchingViewController: UIViewController {
             alpha: 1.0
             ).CGColor
         searchingView.layer.insertSublayer(pulseEffect, below: beaconSearchImage.layer)
+        
+        styleUI()
     }
 
 }
