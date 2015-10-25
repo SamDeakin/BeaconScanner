@@ -12,8 +12,8 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
 
   var comments = [Comment]()
     
-    var major: NSNumber?
-    var minor: NSNumber?
+    var major: NSNumber!
+    var minor: NSNumber!
   
   @IBOutlet var tableView: UITableView!
   
@@ -31,7 +31,10 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
     
     //Retrieve data
     let query = PFQuery(className:"CommentObject")
-    query.whereKey("targetId", equalTo:"Beacon Id")
+    let beaconId = "\(major)-\(minor)"
+    print(beaconId)
+    
+    query.whereKey("targetId", equalTo: beaconId)
     
     query.findObjectsInBackgroundWithBlock { objects, error in
       if error == nil {
@@ -40,8 +43,6 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
           let comment = Comment(commentId: "test", targetId: object.objectForKey("targetId") as! String, rating: object.objectForKey("rating") as! Int, content: object.objectForKey("content") as! String, username: object.objectForKey("username") as! String)
           self.comments.append(comment!);
         }
-        print(self.comments)
-        
         //Reload
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
           self.tableView.reloadData()
@@ -62,12 +63,12 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
     let comment = self.comments[indexPath.row]
     cell.username.text = comment.username
     cell.comment.text = comment.content
+    cell.rating.text = String(comment.rating) + " Stars"
     //Return it
     return cell
   }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    print(self.comments.count)
     return self.comments.count
   }
 }
