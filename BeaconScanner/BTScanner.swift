@@ -35,6 +35,11 @@ class BTScanner: NSObject, CLLocationManagerDelegate {
         manager.startUpdatingLocation()
     }
     
+    func stop() {
+        manager.stopRangingBeaconsInRegion(beaconRegion)
+        manager.stopUpdatingLocation()
+    }
+    
     func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
         // beacons is the array of beacons found
         NSLog("%@", beacons)

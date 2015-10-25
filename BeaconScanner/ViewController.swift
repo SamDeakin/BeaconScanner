@@ -29,6 +29,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var popupDataTitle: UILabel!
     @IBOutlet weak var popupImage: UIImageView!
     
+    var beacon: Beacon!
+    let scanner = BTScanner.sharedInstance()
+    
     //temp blur on button press to simulate finding a beacon
     @IBAction func temp(sender: UIButton) {
         //Blur background
@@ -48,6 +51,13 @@ class ViewController: UIViewController {
     @IBAction func temp2(sender: AnyObject) {
         //slideout popup and populate it
         overlayLeavingAnimation()
+    }
+    
+    // More Info is clicked and we are moving to that screen
+    @IBAction func moreInfo(sender: AnyObject) {
+        scanner.stop()
+        
+        //TODO add place for reentry and add scanner.start()
     }
     
     func overlayEntranceAnimation() {
@@ -104,6 +114,10 @@ class ViewController: UIViewController {
             ).CGColor
         blurView.layer.insertSublayer(pulseEffect, below: beaconSearchImage.layer)
         styleUI()
+        
+        // Start scanning for beacons
+        scanner.delegate = self
+        scanner.start()
     }
 
 }

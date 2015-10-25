@@ -73,25 +73,22 @@
                             <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YIR-Ey-7Tb">
                                 <rect key="frame" x="155" y="138" width="290" height="325"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="giraf" translatesAutoresizingMaskIntoConstraints="NO" id="GXO-qp-GKH">
-                                        <rect key="frame" x="0.0" y="0.0" width="290" height="167"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="167" id="Nmb-ht-Ucz"/>
-                                        </constraints>
-                                    </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kW5-aO-UEI">
                                         <rect key="frame" x="0.0" y="167" width="290" height="158"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKb-rE-Dup">
-                                                <rect key="frame" x="113" y="120" width="65" height="30"/>
-                                                <state key="normal" title="More Info"/>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Giraf" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0K-Hq-qRx">
                                                 <rect key="frame" x="0.0" y="8" width="290" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKb-rE-Dup">
+                                                <rect key="frame" x="113" y="120" width="65" height="30"/>
+                                                <state key="normal" title="More Info"/>
+                                                <connections>
+                                                    <segue destination="gpj-3e-022" kind="show" identifier="showMoreInfoModally" id="Q9j-6k-0jn"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -108,6 +105,12 @@
                                             <action selector="temp2:" destination="u4z-go-vq2" eventType="touchUpInside" id="wub-U6-JHg"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="giraf" translatesAutoresizingMaskIntoConstraints="NO" id="GXO-qp-GKH">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="167"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="167" id="Nmb-ht-Ucz"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
@@ -153,6 +156,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="edq-az-cHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2186" y="1535"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VKP-rV-dcx">
+            <objects>
+                <viewController id="gpj-3e-022" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3NY-UT-Rop"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wj7-UD-bP3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YNV-li-mxt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v5R-gc-aLK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2979" y="1535"/>
         </scene>
     </scenes>
     <resources>
