@@ -12,6 +12,10 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
 
     @IBOutlet weak var titleLabel: UILabel!
   
+  var users = [PFUser]()
+  var senderId: String!
+  var senderDisplayName: String!
+  
     func styleUI() {
         let smartRange = NSRange(location: 0, length: 5)
         let smartTitle = NSMutableAttributedString(string: "SMARTshop")
@@ -31,10 +35,6 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-      
-      
-    
         styleUI()
     }
 
@@ -66,34 +66,37 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
     if (PFUser.currentUser() == nil) {
-      let loginViewController = PFLogInViewController()
+      let loginViewController = CustomLoginPage()
       loginViewController.delegate = self
-      loginViewController.fields = [.UsernameAndPassword, .LogInButton, .PasswordForgotten, .SignUpButton, .Facebook, .Twitter]
+      loginViewController.fields = [.Facebook, .Twitter]
       loginViewController.emailAsUsername = true
       loginViewController.signUpController?.delegate = self
+      
       self.presentViewController(loginViewController, animated: false, completion: nil)
-    } else {
-      presentLoggedInAlert()
     }
   }
   
   func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
     self.dismissViewControllerAnimated(true, completion: nil)
-    presentLoggedInAlert()
+    
+    let twitter = PFTwitterUtils.twitter()
+    let twitterName = twitter!.screenName!
+    
+    self.senderDisplayName = twitterName
+    
+    let comment = PFObject(className: "CommentObject")
+    comment["username"] = self.senderDisplayName
+    comment["targetIt"] = "test"
+    comment["rating"] = 5
+    comment["content"] = "comment 123"
+    
+    comment.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+      print("Object has been saved.")
+    }
   }
   
   func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
     self.dismissViewControllerAnimated(true, completion: nil)
-    presentLoggedInAlert()
-  }
-  
-  func presentLoggedInAlert() {
-    let alertController = UIAlertController(title: "You're logged in", message: "Welcome to Vay.K", preferredStyle: .Alert)
-    let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-      self.dismissViewControllerAnimated(true, completion: nil)
-    }
-    alertController.addAction(OKAction)
-    self.presentViewController(alertController, animated: true, completion: nil)
   }
 }
 

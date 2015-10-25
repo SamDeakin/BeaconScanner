@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010B44BE1BDD3A9200455DC2 /* CustomLoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B44BD1BDD3A9200455DC2 /* CustomLoginPage.swift */; };
 		012078E11BDC27130086A6F4 /* LFTPulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012078E01BDC27130086A6F4 /* LFTPulseAnimation.swift */; };
 		012078E31BDC2AE10086A6F4 /* searchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012078E21BDC2AE10086A6F4 /* searchingViewController.swift */; };
 		012078E51BDC4FBC0086A6F4 /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012078E41BDC4FBC0086A6F4 /* Beacon.swift */; };
 		012078E91BDC54F80086A6F4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012078E81BDC54F80086A6F4 /* User.swift */; };
 		012078EB1BDC552A0086A6F4 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012078EA1BDC552A0086A6F4 /* Comment.swift */; };
-		012078ED1BDC57090086A6F4 /* NewCommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012078EC1BDC57090086A6F4 /* NewCommentController.swift */; };
 		012079111BDC6BC10086A6F4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012079101BDC6BC10086A6F4 /* CFNetwork.framework */; };
 		012079131BDC6BCB0086A6F4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012079121BDC6BCB0086A6F4 /* CoreGraphics.framework */; };
 		012079151BDC6BD40086A6F4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012079141BDC6BD40086A6F4 /* CoreLocation.framework */; };
@@ -57,12 +57,12 @@
 /* Begin PBXFileReference section */
 		00A34B84122E692F80151E9C /* Pods-BeaconScanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaconScanner.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeaconScanner/Pods-BeaconScanner.release.xcconfig"; sourceTree = "<group>"; };
 		010B44B91BDC934A00455DC2 /* BeaconScanner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeaconScanner-Bridging-Header.h"; sourceTree = "<group>"; };
+		010B44BD1BDD3A9200455DC2 /* CustomLoginPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLoginPage.swift; sourceTree = "<group>"; };
 		012078E01BDC27130086A6F4 /* LFTPulseAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFTPulseAnimation.swift; sourceTree = "<group>"; };
 		012078E21BDC2AE10086A6F4 /* searchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchingViewController.swift; sourceTree = "<group>"; };
 		012078E41BDC4FBC0086A6F4 /* Beacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
 		012078E81BDC54F80086A6F4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		012078EA1BDC552A0086A6F4 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
-		012078EC1BDC57090086A6F4 /* NewCommentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCommentController.swift; sourceTree = "<group>"; };
 		012079101BDC6BC10086A6F4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		012079121BDC6BCB0086A6F4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		012079141BDC6BD40086A6F4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -183,8 +183,8 @@
 				012078E41BDC4FBC0086A6F4 /* Beacon.swift */,
 				012078E81BDC54F80086A6F4 /* User.swift */,
 				012078EA1BDC552A0086A6F4 /* Comment.swift */,
-				012078EC1BDC57090086A6F4 /* NewCommentController.swift */,
 				010B44B91BDC934A00455DC2 /* BeaconScanner-Bridging-Header.h */,
+				010B44BD1BDD3A9200455DC2 /* CustomLoginPage.swift */,
 			);
 			path = BeaconScanner;
 			sourceTree = "<group>";
@@ -415,7 +415,6 @@
 			files = (
 				750A6F891BDBDC0800D7A715 /* ViewController.swift in Sources */,
 				750A6FB51BDBDDED00D7A715 /* FoundBeaconsViewController.swift in Sources */,
-				012078ED1BDC57090086A6F4 /* NewCommentController.swift in Sources */,
 				750A6FB91BDBF05100D7A715 /* BTScanner.swift in Sources */,
 				012078E11BDC27130086A6F4 /* LFTPulseAnimation.swift in Sources */,
 				012078E51BDC4FBC0086A6F4 /* Beacon.swift in Sources */,
@@ -423,6 +422,7 @@
 				012078E91BDC54F80086A6F4 /* User.swift in Sources */,
 				750A6F871BDBDC0800D7A715 /* AppDelegate.swift in Sources */,
 				012078E31BDC2AE10086A6F4 /* searchingViewController.swift in Sources */,
+				010B44BE1BDD3A9200455DC2 /* CustomLoginPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
