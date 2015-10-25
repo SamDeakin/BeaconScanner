@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 extension UIView {
     func roundCorners(corners:UIRectCorner, radius: CGFloat) {
@@ -46,10 +47,10 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     @IBOutlet weak var starImage: UIImageView!
     @IBOutlet weak var popupDataTitle: UILabel!
     @IBOutlet weak var popupImage: UIImageView!
-  
-  var beacon: Beacon!
-  let scanner = BTScanner.sharedInstance()
-
+    
+    var cbeacon: CLBeacon?
+    var beacon: Beacon?
+    let scanner = BTScanner.sharedInstance()
     
     //temp blur on button press to simulate finding a beacon
     @IBAction func temp(sender: UIButton) {
@@ -78,6 +79,26 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         //TODO add place for reentry and add scanner.start()
     }
     
+    // This method is called by BTScanner
+    func beaconFound(beacon: CLBeacon) {
+        cbeacon = beacon
+        NSLog("beaconFound: %@, %@, %@", beacon.major, beacon.minor, beacon.proximityUUID)
+        if let data = BeaconInfoController.getObjectForBeacon(cbeacon!.major, minor: cbeacon!.minor, proximityUUID: cbeacon!.proximityUUID) {
+            self.beacon = data
+            showBeacon()
+        }
+    }
+    
+    func showBeacon() {
+        // Hide popupView if it is already shown, then show new
+        NSLog("showBeacon")
+        if (!popupView.hidden) {
+            overlayLeavingAnimation()
+        } else {
+            updateAndShowPopupView()
+        }
+    }
+    
     func overlayEntranceAnimation() {
         self.popupYConstraint.constant = 600.0
         self.view.layoutIfNeeded()
@@ -99,15 +120,32 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             completion: { finished in
                 //self.popupView.hidden = true
                 
-                //update pictures and shit
-                self.popupImage.image = UIImage(named: "zebra")
-                self.popupDataTitle.text = "Zebra"
-                
-                //slide back in
-                self.overlayEntranceAnimation()
+                self.updateAndShowPopupView()
                 
                 
         })
+    }
+    
+    func updateAndShowPopupView() {
+        NSLog("updateAndShowPopupView")
+        //update pictures and shit
+        //self.popupImage.image = UIImage(named: "zebra")
+        //self.popupDataTitle.text = "Zebra"
+        self.popupImage.image = self.beacon!.img
+        self.popupDataTitle.text = self.beacon!.title
+        
+        //slide back in
+        //Blur background
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = blurView.bounds
+        blurView.addSubview(blurEffectView)
+        
+        //unhide the view
+        popupView.hidden = false
+        overlayEntranceAnimation()
+        
+        styleOverlay()
     }
     
     func styleOverlay() {

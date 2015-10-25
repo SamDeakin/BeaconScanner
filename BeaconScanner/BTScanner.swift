@@ -12,6 +12,8 @@ class BTScanner: NSObject, CLLocationManagerDelegate {
     var closestBeacon: CLBeacon?
     var delegate: ViewController?
     
+    var notified: Bool = false
+    
     // This class should be treated as a singleton and accessed only through sharedInstance()
     static let _instance = BTScanner()
     class func sharedInstance() -> BTScanner {
@@ -50,9 +52,15 @@ class BTScanner: NSObject, CLLocationManagerDelegate {
     
     // if closestBeacon is nil or if beacon is not the same as it then notify delegate
     private func handleFirstBeacon(beacon: CLBeacon) {
+        NSLog("handleFirstBeacon")
         if let old = closestBeacon {
             // closestBeacon has been set before
             if (old.major != beacon.major || old.minor != beacon.minor) { // We can ignore proximity UUID for this app
+                // closestBeacon is new
+                notified = false
+                notifyDelegate(beacon)
+            } else if (!notified) {
+                // notify delegate if it hasn't been yet
                 notifyDelegate(beacon)
             }
         } else {
@@ -63,10 +71,11 @@ class BTScanner: NSObject, CLLocationManagerDelegate {
     // set closestBeacon to beacon then send to delegate
     private func notifyDelegate(beacon: CLBeacon) {
         closestBeacon = beacon
-        
+        NSLog("notifyDelegate")
         if let scanningView = delegate {
             // notify here because delegate is not nil
-            //TODO
+            scanningView.beaconFound(beacon)
+            notified = true
         }
     }
     
