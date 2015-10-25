@@ -18,7 +18,6 @@
 		750A6FB51BDBDDED00D7A715 /* FoundBeaconsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6FB41BDBDDED00D7A715 /* FoundBeaconsViewController.swift */; };
 		750A6FB91BDBF05100D7A715 /* BTScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6FB81BDBF05100D7A715 /* BTScanner.swift */; };
 		750A6FBB1BDC1D8700D7A715 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 750A6FBA1BDC1D8700D7A715 /* Assets.xcassets */; };
-		A77E133A1BDC572500A66F22 /* testt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77E13391BDC572500A66F22 /* testt.swift */; };
 		A7D014BE4DC23CFE54157769 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834454AADB4D089131318A8F /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +58,6 @@
 		750A6FB81BDBF05100D7A715 /* BTScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTScanner.swift; sourceTree = "<group>"; };
 		750A6FBA1BDC1D8700D7A715 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		834454AADB4D089131318A8F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A77E13391BDC572500A66F22 /* testt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testt.swift; sourceTree = "<group>"; };
 		EB985D5901DD4A02052A86D2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,7 +121,6 @@
 		750A6F851BDBDC0800D7A715 /* BeaconScanner */ = {
 			isa = PBXGroup;
 			children = (
-				A77E13391BDC572500A66F22 /* testt.swift */,
 				750A6F861BDBDC0800D7A715 /* AppDelegate.swift */,
 				012078E01BDC27130086A6F4 /* LFTPulseAnimation.swift */,
 				750A6F881BDBDC0800D7A715 /* ViewController.swift */,
@@ -352,7 +349,6 @@
 				750A6F891BDBDC0800D7A715 /* ViewController.swift in Sources */,
 				750A6FB51BDBDDED00D7A715 /* FoundBeaconsViewController.swift in Sources */,
 				750A6FB91BDBF05100D7A715 /* BTScanner.swift in Sources */,
-				A77E133A1BDC572500A66F22 /* testt.swift in Sources */,
 				012078E11BDC27130086A6F4 /* LFTPulseAnimation.swift in Sources */,
 				750A6F871BDBDC0800D7A715 /* AppDelegate.swift in Sources */,
 			);

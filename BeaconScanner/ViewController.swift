@@ -15,6 +15,14 @@ extension UIView {
         mask.path = path.CGPath
         self.layer.mask = mask
     }
+
+    func setWidth(width: CGFloat) {
+        
+        var frame: CGRect = self.frame
+        frame.size.width = width
+        
+        self.frame = frame
+    }
 }
 
 class ViewController: UIViewController {
@@ -23,9 +31,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var beaconSearchImage: UIView!
     @IBOutlet var searchingView: UIView!
     @IBOutlet weak var popupView: UIView!
+    @IBOutlet weak var starBackgroundColour: UIView!
     @IBOutlet weak var popupYConstraint: NSLayoutConstraint!
     @IBOutlet weak var popupXConstraint: NSLayoutConstraint!
+    @IBOutlet weak var starBackgroundWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var popupBottomView: UIView!
+    @IBOutlet weak var starImage: UIImageView!
     @IBOutlet weak var popupDataTitle: UILabel!
     @IBOutlet weak var popupImage: UIImageView!
     
@@ -87,6 +98,7 @@ class ViewController: UIViewController {
         popupImage.roundCorners([.TopLeft , .TopRight], radius: 10)
         popupBottomView.roundCorners([.BottomLeft , .BottomRight], radius: 10)
         
+        starBackgroundColour.setWidth(starImage.frame.width*(4.2/5))
     }
     
     func styleUI() {
@@ -104,6 +116,11 @@ class ViewController: UIViewController {
             ).CGColor
         blurView.layer.insertSublayer(pulseEffect, below: beaconSearchImage.layer)
         styleUI()
+        
+
+
+
+        
     }
     
 
