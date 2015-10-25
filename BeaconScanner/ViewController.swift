@@ -189,24 +189,6 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
       print("Object has been saved.")
     }
     
-    //Retrieve data
-    let query = PFQuery(className:"Comments")
-    query.whereKey("targetId", equalTo:"")
-    
-    query.findObjectsInBackgroundWithBlock { objects, error in
-      if error == nil {
-        for object in objects!.reverse() {
-          print(object)
-        }
-        if objects!.count > 0 {
-        
-        }
-      } else {
-        print("Error");
-      }
-    
-    }
-    
   }
   
   func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {

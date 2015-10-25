@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		010B44BE1BDD3A9200455DC2 /* CustomLoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B44BD1BDD3A9200455DC2 /* CustomLoginPage.swift */; };
+		010B44C01BDD74D400455DC2 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B44BF1BDD74D400455DC2 /* CommentsViewController.swift */; };
+		010B44C21BDD782D00455DC2 /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B44C11BDD782D00455DC2 /* CommentsTableViewCell.swift */; };
 		012078E11BDC27130086A6F4 /* LFTPulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012078E01BDC27130086A6F4 /* LFTPulseAnimation.swift */; };
 		012078E51BDC4FBC0086A6F4 /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012078E41BDC4FBC0086A6F4 /* Beacon.swift */; };
 		012078E91BDC54F80086A6F4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012078E81BDC54F80086A6F4 /* User.swift */; };
@@ -59,6 +61,8 @@
 		00A34B84122E692F80151E9C /* Pods-BeaconScanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaconScanner.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeaconScanner/Pods-BeaconScanner.release.xcconfig"; sourceTree = "<group>"; };
 		010B44B91BDC934A00455DC2 /* BeaconScanner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeaconScanner-Bridging-Header.h"; sourceTree = "<group>"; };
 		010B44BD1BDD3A9200455DC2 /* CustomLoginPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLoginPage.swift; sourceTree = "<group>"; };
+		010B44BF1BDD74D400455DC2 /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		010B44C11BDD782D00455DC2 /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
 		012078E01BDC27130086A6F4 /* LFTPulseAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFTPulseAnimation.swift; sourceTree = "<group>"; };
 		012078E41BDC4FBC0086A6F4 /* Beacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
 		012078E81BDC54F80086A6F4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 				012078EA1BDC552A0086A6F4 /* Comment.swift */,
 				010B44B91BDC934A00455DC2 /* BeaconScanner-Bridging-Header.h */,
 				010B44BD1BDD3A9200455DC2 /* CustomLoginPage.swift */,
+				010B44BF1BDD74D400455DC2 /* CommentsViewController.swift */,
+				010B44C11BDD782D00455DC2 /* CommentsTableViewCell.swift */,
 			);
 			path = BeaconScanner;
 			sourceTree = "<group>";
@@ -424,9 +430,11 @@
 				012078E51BDC4FBC0086A6F4 /* Beacon.swift in Sources */,
 				012078EB1BDC552A0086A6F4 /* Comment.swift in Sources */,
 				012078E91BDC54F80086A6F4 /* User.swift in Sources */,
+				010B44C01BDD74D400455DC2 /* CommentsViewController.swift in Sources */,
 				750A6F871BDBDC0800D7A715 /* AppDelegate.swift in Sources */,
 				010B44BE1BDD3A9200455DC2 /* CustomLoginPage.swift in Sources */,
 				A77E13361BDC291400A66F22 /* searchingViewController.swift in Sources */,
+				010B44C21BDD782D00455DC2 /* CommentsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
