@@ -12,11 +12,15 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var _scanner: BTScanner?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         self.window!.rootViewController = UIStoryboard(name:"Main", bundle:NSBundle.mainBundle()).instantiateInitialViewController();
+
+        // TODO code to be moved to initial view controller init
+        let scanner = BTScanner.sharedInstance()
+        //scanner.delegate = self
+        scanner.start()
         
         return true
     }
@@ -41,14 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-    
-    internal func setScanner(scanner: BTScanner) {
-        self._scanner = scanner
-    }
-    
-    internal func getScanner() -> BTScanner {
-        return _scanner!
     }
 }
 

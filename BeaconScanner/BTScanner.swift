@@ -16,10 +16,17 @@ import CoreLocation
 class BTScanner: NSObject, CLLocationManagerDelegate {
     let manager = CLLocationManager()
     let beaconRegion = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "0E0A5A4C-7C12-4D89-8511-68D294225B5E")!, identifier: "vu.phuong.beacons")
-    var beaconTable: FoundBeaconsViewController?
-    var searchView: searchingViewController?
     
-    override init() {
+    var closestBeacon: CLBeacon?
+    var delegate: searchingViewController?
+    
+    // This class should be treated as a singleton and accessed only through sharedInstance()
+    static let _instance = BTScanner()
+    class func sharedInstance() -> BTScanner {
+        return _instance
+    }
+    
+    override private init() {
         super.init()
         
         manager.delegate = self
@@ -28,40 +35,41 @@ class BTScanner: NSObject, CLLocationManagerDelegate {
             manager.requestAlwaysAuthorization()
         }
         
-        beaconRegion.notifyOnEntry = true
-        beaconRegion.notifyOnExit = true
-        
         // do any additional setup here
     }
     
     func start() {
         manager.startRangingBeaconsInRegion(beaconRegion)
         manager.startUpdatingLocation()
-        let flag = (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedAlways)
-        NSLog("%@", flag ? "true" : "false")
-    }
-    
-    func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        // send a message to the scanning view saying there are beacons
-        if let search = searchView {
-            // tell search view beacons are found
-        }
-    }
-    
-    func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {
-        // send a message to the table saying there are no beacons
-        if let table = beaconTable {
-            // tell table view no beacons found
-        }
     }
     
     func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
         // beacons is the array of beacons found
-        if let search = searchView {
-            // tell searchView about beacons
+        //NSLog("%@", beacons)
+        if (beacons.count > 0) {
+            handleFirstBeacon(beacons[0])
         }
-        if let table = beaconTable {
-            // tell table about beacons
+    }
+    
+    // if closestBeacon is nil or if beacon is not the same as it then notify delegate
+    private func handleFirstBeacon(beacon: CLBeacon) {
+        if let old = closestBeacon {
+            // closestBeacon has been set before
+            if (old.major != beacon.major || old.minor != beacon.minor) { // We can ignore proximity UUID for this app
+                notifyDelegate(beacon)
+            }
+        } else {
+            notifyDelegate(beacon)
+        }
+    }
+    
+    // set closestBeacon to beacon then send to delegate
+    private func notifyDelegate(beacon: CLBeacon) {
+        closestBeacon = beacon
+        
+        if let scanningView = delegate {
+            // notify here because delegate is not nil
+            //TODO
         }
     }
     

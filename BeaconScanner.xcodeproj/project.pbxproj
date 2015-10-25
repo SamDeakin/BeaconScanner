@@ -19,7 +19,7 @@
 		750A6FB51BDBDDED00D7A715 /* FoundBeaconsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6FB41BDBDDED00D7A715 /* FoundBeaconsViewController.swift */; };
 		750A6FB91BDBF05100D7A715 /* BTScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6FB81BDBF05100D7A715 /* BTScanner.swift */; };
 		750A6FBB1BDC1D8700D7A715 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 750A6FBA1BDC1D8700D7A715 /* Assets.xcassets */; };
-		A7D014BE4DC23CFE54157769 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834454AADB4D089131318A8F /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A7D014BE4DC23CFE54157769 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834454AADB4D089131318A8F /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -234,7 +234,7 @@
 				TargetAttributes = {
 					750A6F821BDBDC0800D7A715 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = X4Z3ZKKV48;
+						DevelopmentTeam = 98SA93Z838;
 					};
 					750A6F961BDBDC0800D7A715 = {
 						CreatedOnToolsVersion = 7.1;

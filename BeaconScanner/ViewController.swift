@@ -44,14 +44,7 @@ class ViewController: UIViewController {
         if let identifier = segue.identifier {
             switch(identifier) {
             case "startScanning":
-                let scanner = BTScanner()
-                //scanner.setScanningViewController()
-                //scanner.setTableViewController()
-                scanner.start()
-                NSLog("scanning")
-                if let delegate = UIApplication.sharedApplication().delegate as! AppDelegate? {
-                    delegate.setScanner(scanner)
-                }
+                
                 return
             default:
                 return
