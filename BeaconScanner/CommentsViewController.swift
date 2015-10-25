@@ -39,12 +39,40 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
 
     self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Post", style: .Plain, target: self, action: "postButtonSegue")
 
+    let comment1 = Comment(commentId: "test", targetId: "7103-30098", rating: 3, content: "Perfect place to build a tower", username: "Kim")
+    let comment2 = Comment(commentId: "test", targetId: "7103-30098", rating: 5, content: "The building is so good!", username: "Heyaa")
+    let comment3 = Comment(commentId: "test", targetId: "7103-30098", rating: 4, content: "This will make the city better!", username: "Mr.T")
+    let comment4 = Comment(commentId: "test", targetId: "7103-30098", rating: 2, content: "Not a good place to build a tower", username: "Thomas")
     
+    let comment5 = Comment(commentId: "test", targetId: "7103-31098", rating: 2, content: "Not a place to build a house", username: "Lola")
+    let comment6 = Comment(commentId: "test", targetId: "7103-31098", rating: 1, content: "The building is so bad!", username: "Lukas")
+    let comment7 = Comment(commentId: "test", targetId: "7103-31098", rating: 1, content: "This area is so bad!", username: "Mr.T")
+    let comment8 = Comment(commentId: "test", targetId: "7103-31098", rating: 2, content: "Not a good place to build a tower", username: "Tuomas")
+    
+    let comment9 = Comment(commentId: "test", targetId: "7103-32098", rating: 3, content: "Not a place to build a house", username: "Xi Ji")
+    let comment10 = Comment(commentId: "test", targetId: "7103-32098", rating: 2, content: "The building is so bad!", username: "Murakami")
+    let comment11 = Comment(commentId: "test", targetId: "7103-32098", rating: 4, content: "This area is not so bad!", username: "Mr.T")
+    let comment12 = Comment(commentId: "test", targetId: "7103-32098", rating: 2, content: "Not a good place to build a tower", username: "Deakin")
+
+    
+    self.comments.append(comment1!)
+    self.comments.append(comment2!)
+    self.comments.append(comment3!)
+    self.comments.append(comment4!)
+    
+    self.comments.append(comment5!)
+    self.comments.append(comment6!)
+    self.comments.append(comment7!)
+    self.comments.append(comment8!)
+    
+    self.comments.append(comment9!)
+    self.comments.append(comment10!)
+    self.comments.append(comment11!)
+    self.comments.append(comment12!)
     
     //Retrieve data
     let query = PFQuery(className:"CommentObject")
     let beaconId = "\(major)-\(minor)"
-    print(beaconId)
     
     query.whereKey("targetId", equalTo: beaconId)
     
