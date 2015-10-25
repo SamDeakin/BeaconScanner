@@ -135,6 +135,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
   func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
     self.dismissViewControllerAnimated(true, completion: nil)
     
+    //Send data
     let twitter = PFTwitterUtils.twitter()
     let twitterName = twitter!.screenName!
     
@@ -142,13 +143,32 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     
     let comment = PFObject(className: "CommentObject")
     comment["username"] = self.senderDisplayName
-    comment["targetIt"] = "test"
+    comment["targetIt"] = "Beacon Id"
     comment["rating"] = 5
     comment["content"] = "comment 123"
     
     comment.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
       print("Object has been saved.")
     }
+    
+    //Retrieve data
+    let query = PFQuery(className:"Comments")
+    query.whereKey("targetId", equalTo:"")
+    
+    query.findObjectsInBackgroundWithBlock { objects, error in
+      if error == nil {
+        for object in objects!.reverse() {
+          print(object)
+        }
+        if objects!.count > 0 {
+        
+        }
+      } else {
+        print("Error");
+      }
+    
+    }
+    
   }
   
   func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
