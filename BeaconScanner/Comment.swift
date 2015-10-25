@@ -21,9 +21,5 @@ class Comment {
     self.targetId = targetId
     self.rating = rating
     self.content = content
-    
-    if content.isEmpty {
-      return nil
-    }
   }
 }

@@ -185,7 +185,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     
     let comment = PFObject(className: "CommentObject")
     comment["username"] = self.senderDisplayName
-    comment["targetIt"] = "Beacon Id"
+    comment["targetId"] = "7103-30098"
     comment["rating"] = 5
     comment["content"] = "comment 123"
     

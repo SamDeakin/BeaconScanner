@@ -15,6 +15,8 @@ class CommentsTableViewCell: UITableViewCell {
   
   @IBOutlet weak var comment: UILabel!
   
+  @IBOutlet weak var rating: UILabel!
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     // Initialization code

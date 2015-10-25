@@ -17,7 +17,7 @@ class CustomLoginPage: PFLogInViewController {
     
     let label = UILabel()
     label.textColor = UIColor.whiteColor()
-    label.text = "SMART Shop"
+    label.text = "uPlan"
     label.font = UIFont (name: "HelveticaNeue-UltraLight", size: 30)
     logInView?.logo = label
   }
