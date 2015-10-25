@@ -23,8 +23,8 @@
 		750A6FB91BDBF05100D7A715 /* BTScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6FB81BDBF05100D7A715 /* BTScanner.swift */; };
 		750A6FBB1BDC1D8700D7A715 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 750A6FBA1BDC1D8700D7A715 /* Assets.xcassets */; };
 		750A6FBD1BDC640400D7A715 /* BeaconInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6FBC1BDC640400D7A715 /* BeaconInfo.swift */; };
-		A7D014BE4DC23CFE54157769 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834454AADB4D089131318A8F /* Pods.framework */; };
 		A77E13361BDC291400A66F22 /* searchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77E13351BDC291400A66F22 /* searchingViewController.swift */; };
+		A7D014BE4DC23CFE54157769 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834454AADB4D089131318A8F /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,8 +69,8 @@
 		750A6FBA1BDC1D8700D7A715 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		750A6FBC1BDC640400D7A715 /* BeaconInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconInfo.swift; sourceTree = "<group>"; };
 		834454AADB4D089131318A8F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB985D5901DD4A02052A86D2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A77E13351BDC291400A66F22 /* searchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchingViewController.swift; sourceTree = "<group>"; };
+		EB985D5901DD4A02052A86D2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

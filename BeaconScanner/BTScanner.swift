@@ -10,7 +10,7 @@ class BTScanner: NSObject, CLLocationManagerDelegate {
     let beaconRegion = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "0E0A5A4C-7C12-4D89-8511-68D294225B5E")!, identifier: "vu.phuong.beacons")
     
     var closestBeacon: CLBeacon?
-    var delegate: searchingViewController?
+    var delegate: ViewController?
     
     // This class should be treated as a singleton and accessed only through sharedInstance()
     static let _instance = BTScanner()
