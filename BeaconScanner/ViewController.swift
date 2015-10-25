@@ -50,6 +50,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     
     var cbeacon: CLBeacon?
     var beacon: Beacon?
+    var rating: Double?
     let scanner = BTScanner.sharedInstance()
     
     //temp blur on button press to simulate finding a beacon
@@ -82,19 +83,25 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     // This method is called by BTScanner
     func beaconFound(beacon: CLBeacon) {
         cbeacon = beacon
-        NSLog("beaconFound: %@, %@, %@", beacon.major, beacon.minor, beacon.proximityUUID)
         if let data = BeaconInfoController.getObjectForBeacon(cbeacon!.major, minor: cbeacon!.minor, proximityUUID: cbeacon!.proximityUUID) {
             self.beacon = data
+            rating = BeaconInfoController.getRatingForBeacon(data.id)
+            
             showBeacon()
         }
     }
     
     func showBeacon() {
         // Hide popupView if it is already shown, then show new
-        NSLog("showBeacon")
         if (!popupView.hidden) {
             overlayLeavingAnimation()
         } else {
+            //Blur background
+            let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+            let blurEffectView = UIVisualEffectView(effect: blurEffect)
+            blurEffectView.frame = blurView.bounds
+            blurView.addSubview(blurEffectView)
+            
             updateAndShowPopupView()
         }
     }
@@ -127,7 +134,6 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     }
     
     func updateAndShowPopupView() {
-        NSLog("updateAndShowPopupView")
         //update pictures and shit
         //self.popupImage.image = UIImage(named: "zebra")
         //self.popupDataTitle.text = "Zebra"
@@ -135,11 +141,6 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         self.popupDataTitle.text = self.beacon!.title
         
         //slide back in
-        //Blur background
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = blurView.bounds
-        blurView.addSubview(blurEffectView)
         
         //unhide the view
         popupView.hidden = false
@@ -151,9 +152,12 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     func styleOverlay() {
         popupView.layer.cornerRadius = 10
         popupImage.roundCorners([.TopLeft , .TopRight], radius: 10)
-        popupBottomView.roundCorners([.BottomLeft , .BottomRight], radius: 10)        
-        starBackgroundColour.setWidth(starImage.frame.width*(4.2/5))
-
+        popupBottomView.roundCorners([.BottomLeft , .BottomRight], radius: 10)
+        if let r = rating {
+            starBackgroundColour.setWidth(starImage.frame.width*CGFloat(r/5))
+        } else {
+            starBackgroundColour.setWidth(0)
+        }
     }
   
   

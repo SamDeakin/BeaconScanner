@@ -88,13 +88,13 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f0B-c3-nNM">
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f0B-c3-nNM">
                                                 <rect key="frame" x="29" y="55" width="232" height="47"/>
                                                 <animations/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gc2" translatesAutoresizingMaskIntoConstraints="NO" id="v8p-Rc-mUc">
-                                                <rect key="frame" x="29" y="56" width="232" height="47"/>
+                                                <rect key="frame" x="29" y="55" width="232" height="47"/>
                                                 <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="47" id="8TJ-3Q-TAN"/>
@@ -113,7 +113,10 @@
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="f0B-c3-nNM" firstAttribute="width" secondItem="v8p-Rc-mUc" secondAttribute="width" id="AQ3-AO-hu2"/>
+                                            <constraint firstItem="f0B-c3-nNM" firstAttribute="height" secondItem="v8p-Rc-mUc" secondAttribute="height" id="DMr-4L-dJR"/>
                                             <constraint firstItem="E0K-Hq-qRx" firstAttribute="width" secondItem="kW5-aO-UEI" secondAttribute="width" id="NS3-3Q-6Cg"/>
+                                            <constraint firstItem="f0B-c3-nNM" firstAttribute="top" secondItem="v8p-Rc-mUc" secondAttribute="top" id="PRv-dw-EzK"/>
                                             <constraint firstItem="E0K-Hq-qRx" firstAttribute="centerX" secondItem="kW5-aO-UEI" secondAttribute="centerX" id="Qe0-xs-DGR"/>
                                             <constraint firstItem="v8p-Rc-mUc" firstAttribute="centerX" secondItem="kW5-aO-UEI" secondAttribute="centerX" id="lbr-XD-qI4"/>
                                             <constraint firstItem="v8p-Rc-mUc" firstAttribute="centerY" secondItem="kW5-aO-UEI" secondAttribute="centerY" id="uNP-A6-a4B"/>
