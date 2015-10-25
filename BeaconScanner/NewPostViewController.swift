@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewPostViewController: UIViewController, UIPickerViewDelegate {
+class NewPostViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBAction func postPressed(sender: AnyObject) {
     }
@@ -20,6 +20,8 @@ class NewPostViewController: UIViewController, UIPickerViewDelegate {
         commentsInput.layer.borderColor = UIColor.blackColor().CGColor
         commentsInput.layer.borderWidth = 1
         commentsInput.layer.cornerRadius = 10
+        ratingPicker.dataSource = self
+        ratingPicker.delegate = self
     }
     
     var ratingOptions = ["1", "2", "3", "4", "5"]
@@ -36,6 +38,7 @@ class NewPostViewController: UIViewController, UIPickerViewDelegate {
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
     }
     
 }
