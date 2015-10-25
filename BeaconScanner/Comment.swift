@@ -13,9 +13,11 @@ class Comment {
   var targetId: String
   var rating: Int
   var content: String
+  var username: String
   
-  init?(commentId: String, targetId: String, rating: Int, content: String) {
+  init?(commentId: String, targetId: String, rating: Int, content: String, username: String) {
     self.commentId = commentId
+    self.username = username
     self.targetId = targetId
     self.rating = rating
     self.content = content
