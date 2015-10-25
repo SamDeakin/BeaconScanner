@@ -68,7 +68,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     if (PFUser.currentUser() == nil) {
       let loginViewController = CustomLoginPage()
       loginViewController.delegate = self
-      loginViewController.fields = [.Facebook, .Twitter]
+      loginViewController.fields = [.Twitter]
       loginViewController.emailAsUsername = true
       loginViewController.signUpController?.delegate = self
       
