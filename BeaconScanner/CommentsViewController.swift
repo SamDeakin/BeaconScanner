@@ -11,6 +11,9 @@ import UIKit
 class CommentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
   var comments = [Comment]()
+    
+    var major: NSNumber?
+    var minor: NSNumber?
   
   override func awakeFromNib() {
     super.awakeFromNib()
