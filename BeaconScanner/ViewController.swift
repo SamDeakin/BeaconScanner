@@ -95,6 +95,12 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         if (!popupView.hidden) {
             overlayLeavingAnimation()
         } else {
+            //Blur background
+            let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+            let blurEffectView = UIVisualEffectView(effect: blurEffect)
+            blurEffectView.frame = blurView.bounds
+            blurView.addSubview(blurEffectView)
+            
             updateAndShowPopupView()
         }
     }
@@ -135,11 +141,6 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         self.popupDataTitle.text = self.beacon!.title
         
         //slide back in
-        //Blur background
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = blurView.bounds
-        blurView.addSubview(blurEffectView)
         
         //unhide the view
         popupView.hidden = false
