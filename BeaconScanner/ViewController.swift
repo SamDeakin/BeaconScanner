@@ -214,5 +214,13 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
       scanner.delegate = self
       scanner.start()
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "viewComments") {
+            let dest = segue.destinationViewController as! CommentsViewController
+            dest.major = cbeacon!.major
+            dest.minor = cbeacon!.minor
+        }
+    }
 }
 
