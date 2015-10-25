@@ -70,7 +70,7 @@
                                     <constraint firstItem="UcL-E9-cbz" firstAttribute="centerY" secondItem="YTW-Zq-NNd" secondAttribute="centerY" id="pag-b0-bwk"/>
                                 </constraints>
                             </view>
-                            <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YIR-Ey-7Tb">
+                            <view hidden="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YIR-Ey-7Tb">
                                 <rect key="frame" x="155" y="138" width="290" height="325"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kW5-aO-UEI">
@@ -82,6 +82,17 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f0B-c3-nNM">
+                                                <rect key="frame" x="29" y="55" width="232" height="47"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gc2" translatesAutoresizingMaskIntoConstraints="NO" id="v8p-Rc-mUc">
+                                                <rect key="frame" x="29" y="56" width="232" height="47"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="47" id="8TJ-3Q-TAN"/>
+                                                    <constraint firstAttribute="width" constant="232" id="KEi-pF-b9y"/>
+                                                </constraints>
+                                            </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKb-rE-Dup">
                                                 <rect key="frame" x="113" y="120" width="65" height="30"/>
                                                 <state key="normal" title="More Info"/>
@@ -94,6 +105,8 @@
                                         <constraints>
                                             <constraint firstItem="E0K-Hq-qRx" firstAttribute="width" secondItem="kW5-aO-UEI" secondAttribute="width" id="NS3-3Q-6Cg"/>
                                             <constraint firstItem="E0K-Hq-qRx" firstAttribute="centerX" secondItem="kW5-aO-UEI" secondAttribute="centerX" id="Qe0-xs-DGR"/>
+                                            <constraint firstItem="v8p-Rc-mUc" firstAttribute="centerX" secondItem="kW5-aO-UEI" secondAttribute="centerX" id="lbr-XD-qI4"/>
+                                            <constraint firstItem="v8p-Rc-mUc" firstAttribute="centerY" secondItem="kW5-aO-UEI" secondAttribute="centerY" id="uNP-A6-a4B"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cI7-7e-mhP">
@@ -151,6 +164,8 @@
                         <outlet property="popupXConstraint" destination="FLz-yW-fQA" id="WJD-f6-a2c"/>
                         <outlet property="popupYConstraint" destination="zDZ-24-owR" id="UYT-V9-DXD"/>
                         <outlet property="searchingView" destination="ykh-s1-WtE" id="HhN-Tp-pPe"/>
+                        <outlet property="starBackgroundColour" destination="f0B-c3-nNM" id="jOH-Vx-bJ5"/>
+                        <outlet property="starImage" destination="v8p-Rc-mUc" id="M0c-Q7-BGn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="edq-az-cHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -178,6 +193,7 @@
     </scenes>
     <resources>
         <image name="beacon200" width="200" height="123"/>
+        <image name="gc2" width="400" height="87"/>
         <image name="giraf" width="318" height="159"/>
     </resources>
 </document>

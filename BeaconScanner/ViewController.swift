@@ -9,12 +9,20 @@
 import UIKit
 
 extension UIView {
-  func roundCorners(corners:UIRectCorner, radius: CGFloat) {
-    let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-    let mask = CAShapeLayer()
-    mask.path = path.CGPath
-    self.layer.mask = mask
-  }
+    func roundCorners(corners:UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.CGPath
+        self.layer.mask = mask
+    }
+
+    func setWidth(width: CGFloat) {
+        
+        var frame: CGRect = self.frame
+        frame.size.width = width
+        
+        self.frame = frame
+    }
 }
 
 class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
@@ -25,18 +33,23 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
   var senderId: String!
   
   var senderDisplayName: String!
-  @IBOutlet weak var blurView: UIView!
-  @IBOutlet weak var beaconSearchImage: UIView!
-  @IBOutlet var searchingView: UIView!
-  @IBOutlet weak var popupView: UIView!
-  @IBOutlet weak var popupYConstraint: NSLayoutConstraint!
-  @IBOutlet weak var popupXConstraint: NSLayoutConstraint!
-  @IBOutlet weak var popupBottomView: UIView!
-  @IBOutlet weak var popupDataTitle: UILabel!
-  @IBOutlet weak var popupImage: UIImageView!
+    
+    @IBOutlet weak var blurView: UIView!
+    @IBOutlet weak var beaconSearchImage: UIView!
+    @IBOutlet var searchingView: UIView!
+    @IBOutlet weak var popupView: UIView!
+    @IBOutlet weak var starBackgroundColour: UIView!
+    @IBOutlet weak var popupYConstraint: NSLayoutConstraint!
+    @IBOutlet weak var popupXConstraint: NSLayoutConstraint!
+    @IBOutlet weak var starBackgroundWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var popupBottomView: UIView!
+    @IBOutlet weak var starImage: UIImageView!
+    @IBOutlet weak var popupDataTitle: UILabel!
+    @IBOutlet weak var popupImage: UIImageView!
   
   var beacon: Beacon!
   let scanner = BTScanner.sharedInstance()
+
     
     //temp blur on button press to simulate finding a beacon
     @IBAction func temp(sender: UIButton) {
@@ -100,8 +113,9 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     func styleOverlay() {
         popupView.layer.cornerRadius = 10
         popupImage.roundCorners([.TopLeft , .TopRight], radius: 10)
-        popupBottomView.roundCorners([.BottomLeft , .BottomRight], radius: 10)
-      
+        popupBottomView.roundCorners([.BottomLeft , .BottomRight], radius: 10)        
+        starBackgroundColour.setWidth(starImage.frame.width*(4.2/5))
+
     }
   
   
