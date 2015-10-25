@@ -220,7 +220,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             let dest = segue.destinationViewController as! CommentsViewController
             dest.major = cbeacon!.major
             dest.minor = cbeacon!.minor
-        }
+      }
     }
 }
 

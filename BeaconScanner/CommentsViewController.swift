@@ -111,4 +111,12 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return self.comments.count
   }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if (segue.identifier == "toPostComments") {
+      let dest = segue.destinationViewController as! NewPostViewController
+      dest.major = self.major
+      dest.minor = self.minor
+    }
+  }
 }

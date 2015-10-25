@@ -9,14 +9,37 @@
 import UIKit
 
 class NewPostViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-
+  
+  var major: NSNumber!
+  var minor: NSNumber!
+  var senderDisplayName: String!
+  
     @IBAction func postPressed(sender: AnyObject) {
+      
+      let beaconId = "\(major)-\(minor)"
+      
+      let twitter = PFTwitterUtils.twitter()
+      let twitterName = twitter!.screenName!
+      
+      self.senderDisplayName = twitterName
+      
+      let comment = PFObject(className: "CommentObject")
+      comment["username"] = self.senderDisplayName
+      comment["targetId"] = beaconId
+      comment["rating"] = ratingPicker
+      comment["content"] = commentsInput
+      
+      comment.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+        print("Object has been saved.")
+      }
+      
     }
     
     @IBOutlet weak var ratingPicker: UIPickerView!
     @IBOutlet weak var commentsInput: UITextView!
     
     override func viewDidLoad() {
+      
         commentsInput.layer.borderColor = UIColor.blackColor().CGColor
         commentsInput.layer.borderWidth = 1
         commentsInput.layer.cornerRadius = 10
