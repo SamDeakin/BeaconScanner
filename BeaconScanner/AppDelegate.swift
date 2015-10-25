@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import Parse
-import Bolts
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        self.window!.rootViewController = UIStoryboard(name:"Main", bundle:NSBundle.mainBundle()).instantiateInitialViewController();
+        self.window!.rootViewController = UIStoryboard(name:"Main", bundle:NSBundle.mainBundle()).instantiateInitialViewController()
       
         Parse.enableLocalDatastore()
       
@@ -36,8 +34,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+      
+        PFTwitterUtils.initializeWithConsumerKey("Dx0PYVypYzDGYHmFFd402i27J", consumerSecret:"UKAw1mS44vLzNH52eQ4FE0h0RJpAipKrros81bKhp2qbgUgah4")
+      
+        PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         
         return true
+    }
+  
+    func application(application: UIApplication,
+         openURL url: NSURL,
+         sourceApplication: String?,
+         annotation: AnyObject) -> Bool {
+            return FBSDKApplicationDelegate.sharedInstance().application(application,
+        openURL: url,
+        sourceApplication: sourceApplication,
+        annotation: annotation)
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -56,6 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+      FBSDKAppEvents.activateApp()
     }
 
     func applicationWillTerminate(application: UIApplication) {

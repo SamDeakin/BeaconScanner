@@ -1,19 +1,15 @@
 # Uncomment this line to define a global platform for your project
 platform :ios, '9.0'
-use_frameworks!
 
-pod 'Alamofire', '~> 3.0'
+xcodeproj 'BeaconScanner'
+
+target 'BeaconScanner', :exclusive => true do
+
 pod 'Parse'
-
-target 'BeaconScanner' do
-
-end
-
-target 'BeaconScannerTests' do
-
-end
-
-target 'BeaconScannerUITests' do
+pod 'ParseUI'
+pod 'ParseTwitterUtils'
+pod 'ParseFacebookUtilsV4'
+pod 'FBSDKCoreKit'
+pod 'FBSDKLoginKit'
 
 end
-
