@@ -37,28 +37,28 @@ class BeaconInfoController {
     
     static var comments = [
         "7103-30098": [
-            Comment(commentId: "Simple", targetId: "7103-30098", rating: 4, content: "Pretty great, I liked the pretty colours"),
-            Comment(commentId: "LetsNotMeet", targetId: "7103-30098", rating: 1, content: "The balloons were too easy to pop. I wasn't able to do epic battle with my arch nemesis because the roof fell in"),
-            Comment(commentId: "Doge", targetId: "7103-30098", rating: 5, content: "Wow! So balloon! Very popping! Much fun!"),
-            Comment(commentId: "Dissapoint", targetId: "7103-30098", rating: 1, content: "Someone popped them all"),
-            Comment(commentId: "Pedro", targetId: "7103-30098", rating: 5, content: "Vote 4 Pedro"),
-            Comment(commentId: "Deez Nuts", targetId: "7103-30098", rating: 5, content: "Pedro is a lie, vote Deez Nuts")],
+            Comment(commentId: "Simple", targetId: "7103-30098", rating: 4, content: "Pretty great, I liked the pretty colours", username: "Tom"),
+            Comment(commentId: "LetsNotMeet", targetId: "7103-30098", rating: 1, content: "The balloons were too easy to pop. I wasn't able to do epic battle with my arch nemesis because the roof fell in", username: "Tom"),
+            Comment(commentId: "Doge", targetId: "7103-30098", rating: 5, content: "Wow! So balloon! Very popping! Much fun!", username: "Deakin"),
+            Comment(commentId: "Dissapoint", targetId: "7103-30098", rating: 1, content: "Someone popped them all", username: "Jean"),
+            Comment(commentId: "Pedro", targetId: "7103-30098", rating: 5, content: "Vote 4 Pedro", username: "Kim"),
+            Comment(commentId: "Deez Nuts", targetId: "7103-30098", rating: 5, content: "Pedro is a lie, vote Deez Nuts", username: "Mike")],
         "7103-31098": [
-            Comment(commentId: "Skeptical", targetId: "7103-31098", rating: 3, content: "Looks like a fern, the rumors of it's deadliness aren't true"),
-            Comment(commentId: "Cats", targetId: "7103-31098", rating: 4, content: "I haven't seen it do anything other than be a fern, but my cats keep dissapearing..."),
-            Comment(commentId: "Pedro", targetId: "7103-31098", rating: 5, content: "Vote 4 Pedro"),
-            Comment(commentId: "Deez Nuts", targetId: "7103-31098", rating: 5, content: "Pedro is a lie, vote Deez Nuts"),
-            Comment(commentId: "Safe", targetId: "7103-31098", rating: 1, content: "I know it prolly can't kill me, but I ain't gonna stick around and find out")],
+            Comment(commentId: "Skeptical", targetId: "7103-31098", rating: 3, content: "Looks like a fern, the rumors of it's deadliness aren't true", username: "Niin"),
+            Comment(commentId: "Cats", targetId: "7103-31098", rating: 4, content: "I haven't seen it do anything other than be a fern, but my cats keep dissapearing...", username: "Jerry"),
+            Comment(commentId: "Pedro", targetId: "7103-31098", rating: 5, content: "Vote 4 Pedro", username: "Tom"),
+            Comment(commentId: "Deez Nuts", targetId: "7103-31098", rating: 5, content: "Pedro is a lie, vote Deez Nuts", username: "Tom"),
+            Comment(commentId: "Safe", targetId: "7103-31098", rating: 1, content: "I know it prolly can't kill me, but I ain't gonna stick around and find out", username: "Tom")],
         "7103-32098": [
-            Comment(commentId: "OMG", targetId: "7103-32098", rating: 5, content: "OMG BEST THING EVAR"),
-            Comment(commentId: "WTF", targetId: "7103-32098", rating: 5, content: "MY LIFE IS NOW COMPLETE"),
-            Comment(commentId: "wow", targetId: "7103-32098", rating: 1, content: "Too shiny, hurt my eye"),
-            Comment(commentId: "OOM", targetId: "7103-32098", rating: 5, content: "PLS HELP I'VE WASTED ALL MY MONEY ON THESE AND I CAN'T STOP"),
-            Comment(commentId: "Cat", targetId: "7103-32098", rating: 5, content: "My cat's won't stop staring at it"),
-            Comment(commentId: "Pedro", targetId: "7103-32098", rating: 5, content: "Vote 4 Pedro"),
-            Comment(commentId: "Deez Nuts", targetId: "7103-32098", rating: 5, content: "Pedro is a lie, vote Deez Nuts"),
-            Comment(commentId: "Clueless", targetId: "7103-32098", rating: 5, content: "WHO IS DEEZ NUTS?"),
-            Comment(commentId: "Pink", targetId: "7103-32098", rating: 1, content: "It doesn't come in pink")]]
+            Comment(commentId: "OMG", targetId: "7103-32098", rating: 5, content: "OMG BEST THING EVAR", username: "Tom"),
+            Comment(commentId: "WTF", targetId: "7103-32098", rating: 5, content: "MY LIFE IS NOW COMPLETE", username: "Tom"),
+            Comment(commentId: "wow", targetId: "7103-32098", rating: 1, content: "Too shiny, hurt my eye", username: "Tom"),
+            Comment(commentId: "OOM", targetId: "7103-32098", rating: 5, content: "PLS HELP I'VE WASTED ALL MY MONEY ON THESE AND I CAN'T STOP", username: "Tom"),
+            Comment(commentId: "Cat", targetId: "7103-32098", rating: 5, content: "My cat's won't stop staring at it", username: "Tom"),
+            Comment(commentId: "Pedro", targetId: "7103-32098", rating: 5, content: "Vote 4 Pedro", username: "Tom"),
+            Comment(commentId: "Deez Nuts", targetId: "7103-32098", rating: 5, content: "Pedro is a lie, vote Deez Nuts", username: "Tom"),
+            Comment(commentId: "Clueless", targetId: "7103-32098", rating: 5, content: "WHO IS DEEZ NUTS?", username: "Tom"),
+            Comment(commentId: "Pink", targetId: "7103-32098", rating: 1, content: "It doesn't come in pink", username: "Tom")]]
     
     class func getObjectForBeacon(major: NSNumber, minor: NSNumber, proximityUUID: NSUUID) -> Beacon? {
         if let index = self.minor.indexOf(minor) where self.minor == minor && self.proximityUUID!.UUIDString == proximityUUID.UUIDString {
@@ -90,10 +90,10 @@ class BeaconInfoController {
      * To make sure that the comments array is synchronized, to add a comment you request it here and then use the array returned
      * If nil is returned then adding a comment failed
      */
-    class func addCommentForId(id: String, commentId: String, rating: Int, content: String) -> [Comment?]? {
+  class func addCommentForId(id: String, commentId: String, rating: Int, content: String, username: String) -> [Comment?]? {
         // TODO test this to make sure comments is actually updated
         if var array = comments[id] {
-            if let comment = Comment(commentId: commentId, targetId: id, rating: rating, content: content) {
+          if let comment = Comment(commentId: commentId, targetId: id, rating: rating, content: content, username: username) {
                 array.append(comment)
                 return array
             }
