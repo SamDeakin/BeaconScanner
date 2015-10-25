@@ -21,13 +21,25 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
     super.awakeFromNib()
     // Initialization code
   }
+    
+    
+    func postButtonSegue() {
+        
+        //let nextVC = NewPostViewController()
+        self.performSegueWithIdentifier("toPostComments", sender: self)
+        //self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
   
   override func viewDidLoad() {
     
-    let optionButton = UIBarButtonItem()
-    optionButton.title = "Post"
+    //let postButton = UIBarButtonItem()
+    //postButton.title = "Post"
     //optionButton.action = something (put your action here)
-    self.navigationItem.rightBarButtonItem = optionButton
+
+    self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Post", style: .Plain, target: self, action: "postButtonSegue")
+
+    
     
     //Retrieve data
     let query = PFQuery(className:"CommentObject")
